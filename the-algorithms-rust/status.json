@@ -1,0 +1,1571 @@
+{
+  "backtracking::all_combination_of_size_k": {
+    "status": "same",
+    "tests": 8
+  },
+  "backtracking::graph_coloring": {
+    "status": "same",
+    "tests": 16
+  },
+  "backtracking::hamiltonian_cycle": {
+    "status": "same",
+    "tests": 13
+  },
+  "backtracking::knight_tour": {
+    "status": "same",
+    "tests": 5
+  },
+  "backtracking::n_queens": {
+    "status": "same",
+    "tests": 7
+  },
+  "backtracking::parentheses_generator": {
+    "status": "same",
+    "tests": 5
+  },
+  "backtracking::permutations": {
+    "status": "same",
+    "tests": 8
+  },
+  "backtracking::rat_in_maze": {
+    "status": "same",
+    "tests": 15
+  },
+  "backtracking::subset_sum": {
+    "status": "same",
+    "tests": 14
+  },
+  "backtracking::sudoku": {
+    "status": "same",
+    "tests": 2
+  },
+  "big_integer::fast_factorial": {
+    "status": "needs-crate",
+    "detail": "num_bigint, num_traits"
+  },
+  "big_integer::multiply": {
+    "status": "same",
+    "tests": 12
+  },
+  "big_integer::poly1305": {
+    "status": "needs-crate",
+    "detail": "num_bigint, num_traits"
+  },
+  "bit_manipulation::binary_coded_decimal": {
+    "status": "same",
+    "tests": 7
+  },
+  "bit_manipulation::binary_count_trailing_zeros": {
+    "status": "same",
+    "tests": 4
+  },
+  "bit_manipulation::binary_shifts": {
+    "status": "same",
+    "tests": 33
+  },
+  "bit_manipulation::counting_bits": {
+    "status": "same",
+    "tests": 6
+  },
+  "bit_manipulation::find_missing_number": {
+    "status": "same",
+    "tests": 12
+  },
+  "bit_manipulation::find_previous_power_of_two": {
+    "status": "same",
+    "tests": 10
+  },
+  "bit_manipulation::find_unique_number": {
+    "status": "same",
+    "tests": 8
+  },
+  "bit_manipulation::hamming_distance": {
+    "status": "same",
+    "tests": 4
+  },
+  "bit_manipulation::highest_set_bit": {
+    "status": "same",
+    "tests": 5
+  },
+  "bit_manipulation::is_power_of_two": {
+    "status": "same",
+    "tests": 13
+  },
+  "bit_manipulation::n_bits_gray_code": {
+    "status": "same",
+    "tests": 4
+  },
+  "bit_manipulation::reverse_bits": {
+    "status": "same",
+    "tests": 7
+  },
+  "bit_manipulation::rightmost_set_bit": {
+    "status": "same",
+    "tests": 10
+  },
+  "bit_manipulation::sum_of_two_integers": {
+    "status": "same",
+    "tests": 9
+  },
+  "bit_manipulation::swap_odd_even_bits": {
+    "status": "same",
+    "tests": 3
+  },
+  "bit_manipulation::twos_complement": {
+    "status": "same",
+    "tests": 10
+  },
+  "ciphers::aes": {
+    "status": "same",
+    "tests": 4
+  },
+  "ciphers::affine_cipher": {
+    "status": "needs-crate",
+    "detail": "rand"
+  },
+  "ciphers::another_rot13": {
+    "status": "same",
+    "tests": 3
+  },
+  "ciphers::baconian_cipher": {
+    "status": "same",
+    "tests": 2
+  },
+  "ciphers::base16": {
+    "status": "same",
+    "tests": 16
+  },
+  "ciphers::base32": {
+    "status": "same",
+    "tests": 17
+  },
+  "ciphers::base64": {
+    "status": "same",
+    "tests": 4
+  },
+  "ciphers::base85": {
+    "status": "same",
+    "tests": 7
+  },
+  "ciphers::caesar": {
+    "status": "same",
+    "tests": 18
+  },
+  "ciphers::chacha": {
+    "status": "same",
+    "tests": 1
+  },
+  "ciphers::diffie_hellman": {
+    "status": "needs-crate",
+    "detail": "num_bigint, num_traits"
+  },
+  "ciphers::gronsfeld": {
+    "status": "same",
+    "tests": 20
+  },
+  "ciphers::hill_cipher": {
+    "status": "same",
+    "tests": 10
+  },
+  "ciphers::kernighan": {
+    "status": "same",
+    "tests": 1
+  },
+  "ciphers::morse_code": {
+    "status": "same",
+    "tests": 6
+  },
+  "ciphers::polybius": {
+    "status": "same",
+    "tests": 10
+  },
+  "ciphers::rail_fence": {
+    "status": "differs",
+    "detail": "ciphers::rail_fence::test::rails_basic: native pass, JS fail",
+    "tests": 1
+  },
+  "ciphers::rot13": {
+    "status": "same",
+    "tests": 4
+  },
+  "ciphers::rsa_cipher": {
+    "status": "same",
+    "tests": 11
+  },
+  "ciphers::salsa": {
+    "status": "same",
+    "tests": 1
+  },
+  "ciphers::tea": {
+    "status": "differs",
+    "detail": "ciphers::tea::test::test_tea_encdec: native pass, JS missing\nciphers::tea::test::test_block_convert: native pass, JS missing\nciphers::tea::test::test_tea_encrypt: native pass, JS missing",
+    "tests": 3
+  },
+  "ciphers::theoretical_rot13": {
+    "status": "same",
+    "tests": 4
+  },
+  "ciphers::transposition": {
+    "status": "same",
+    "tests": 4
+  },
+  "ciphers::trifid": {
+    "status": "same",
+    "tests": 13
+  },
+  "ciphers::vernam": {
+    "status": "same",
+    "tests": 16
+  },
+  "ciphers::vigenere": {
+    "status": "same",
+    "tests": 6
+  },
+  "ciphers::xor": {
+    "status": "same",
+    "tests": 5
+  },
+  "compression::burrows_wheeler_transform": {
+    "status": "same",
+    "tests": 15
+  },
+  "compression::huffman_encoding": {
+    "status": "refused",
+    "detail": "error: rust-js does not support calling `std::fs::read_to_string` yet\n   --> /Users/chauluu/Documents/Github/algorithms/build/one/compression-huffman_encoding/src/compression/huffman_encoding.rs:305:16\n    |\n\nerror: rust-js does not support calling `std::fs::File::create` yet\n   --> /Users/chauluu/Documents/Github/algorithms/build/one/compression-huffman_encoding/src/compression/huffman_encoding.rs:507:28\n    |\n\nerror: rust-js does not support calling `std::fs::File::create` yet\n   --> /Users/chauluu/Documents/Github/algorithms/build/one/compression-huffman_encoding/src/compression/huffman_encoding.rs:522:9\n    |"
+  },
+  "compression::lz77": {
+    "status": "same",
+    "tests": 13
+  },
+  "compression::move_to_front": {
+    "status": "same",
+    "tests": 6
+  },
+  "compression::peak_signal_to_noise_ratio": {
+    "status": "same",
+    "tests": 5
+  },
+  "compression::run_length_encoding": {
+    "status": "same",
+    "tests": 2
+  },
+  "conversions::binary_to_decimal": {
+    "status": "needs-crate",
+    "detail": "num_traits"
+  },
+  "conversions::binary_to_hexadecimal": {
+    "status": "same",
+    "tests": 4
+  },
+  "conversions::binary_to_octal": {
+    "status": "same",
+    "tests": 2
+  },
+  "conversions::decimal_to_binary": {
+    "status": "same",
+    "tests": 1
+  },
+  "conversions::decimal_to_hexadecimal": {
+    "status": "same",
+    "tests": 6
+  },
+  "conversions::decimal_to_octal": {
+    "status": "same",
+    "tests": 1
+  },
+  "conversions::energy": {
+    "status": "same",
+    "tests": 31
+  },
+  "conversions::hexadecimal_to_binary": {
+    "status": "same",
+    "tests": 4
+  },
+  "conversions::hexadecimal_to_decimal": {
+    "status": "same",
+    "tests": 5
+  },
+  "conversions::hexadecimal_to_octal": {
+    "status": "same",
+    "tests": 2
+  },
+  "conversions::ipv4_conversion": {
+    "status": "same",
+    "tests": 10
+  },
+  "conversions::length_conversion": {
+    "status": "needs-crate",
+    "detail": "num_traits"
+  },
+  "conversions::octal_to_binary": {
+    "status": "same",
+    "tests": 3
+  },
+  "conversions::octal_to_decimal": {
+    "status": "same",
+    "tests": 5
+  },
+  "conversions::octal_to_hexadecimal": {
+    "status": "same",
+    "tests": 2
+  },
+  "conversions::order_of_magnitude_conversion": {
+    "status": "same",
+    "tests": 28
+  },
+  "conversions::pressure": {
+    "status": "same",
+    "tests": 2
+  },
+  "conversions::rectangular_to_polar": {
+    "status": "same",
+    "tests": 1
+  },
+  "conversions::rgb_cmyk_conversion": {
+    "status": "same",
+    "tests": 6
+  },
+  "conversions::rgb_hsv_conversion": {
+    "status": "same",
+    "tests": 12
+  },
+  "conversions::roman_numerals": {
+    "status": "same",
+    "tests": 15
+  },
+  "conversions::speed": {
+    "status": "same",
+    "tests": 2
+  },
+  "conversions::temperature": {
+    "status": "same",
+    "tests": 7
+  },
+  "conversions::time": {
+    "status": "same",
+    "tests": 12
+  },
+  "conversions::volume": {
+    "status": "same",
+    "tests": 3
+  },
+  "conversions::weight": {
+    "status": "same",
+    "tests": 23
+  },
+  "data_structures::avl_tree": {
+    "status": "refused",
+    "detail": "error: rust-js does not support a `&mut std::boxed::Box<data_structures::avl_tree::AVLNode<T>>` from `std::option::Option::<T>::as_mut` used as a value, from its MIR yet\n   --> /Users/chauluu/Documents/Github/algorithms/build/one/data_structures-avl_tree/src/data_structures/avl_tree.rs:244:44\n    |"
+  },
+  "data_structures::b_tree": {
+    "status": "same",
+    "tests": 7
+  },
+  "data_structures::binary_search_tree": {
+    "status": "same",
+    "tests": 4
+  },
+  "data_structures::fenwick_tree": {
+    "status": "same",
+    "tests": 1
+  },
+  "data_structures::floyds_algorithm": {
+    "status": "refused",
+    "detail": "error: rust-js does not support `size_of` of a type parameter yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/data_structures-floyds_algorithm/src/data_structures/floyds_algorithm.rs:27:12\n   |\n\nerror: rust-js does not support `size_of` of a type parameter yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/data_structures-floyds_algorithm/src/data_structures/floyds_algorithm.rs:51:16\n   |\n\nerror: rust-js does not support `size_of` of a type parameter yet\n   --> /Users/chauluu/Documents/Github/algorithms/build/one/data_structures-floyds_algorithm/src/data_structures/linked_list.rs:102:21\n    |"
+  },
+  "data_structures::graph": {
+    "status": "same",
+    "tests": 6
+  },
+  "data_structures::hash_table": {
+    "status": "same",
+    "tests": 6
+  },
+  "data_structures::heap": {
+    "status": "same",
+    "tests": 6
+  },
+  "data_structures::lazy_segment_tree": {
+    "status": "needs-crate",
+    "detail": "quickcheck, quickcheck_macros"
+  },
+  "data_structures::linked_list": {
+    "status": "refused",
+    "detail": "error: rust-js does not support `size_of` of a type parameter yet\n   --> /Users/chauluu/Documents/Github/algorithms/build/one/data_structures-linked_list/src/data_structures/linked_list.rs:102:21\n    |"
+  },
+  "data_structures::probabilistic::count_min_sketch": {
+    "status": "needs-crate",
+    "detail": "quickcheck, quickcheck_macros"
+  },
+  "data_structures::queue": {
+    "status": "same",
+    "tests": 1
+  },
+  "data_structures::range_minimum_query": {
+    "status": "same",
+    "tests": 5
+  },
+  "data_structures::rb_tree": {
+    "status": "refused",
+    "detail": "error: rust-js does not support `size_of` of a type parameter yet\n   --> /Users/chauluu/Documents/Github/algorithms/build/one/data_structures-rb_tree/src/data_structures/rb_tree.rs:259:12\n    |\n\nerror: rust-js does not support `size_of` of a type parameter yet\n   --> /Users/chauluu/Documents/Github/algorithms/build/one/data_structures-rb_tree/src/data_structures/rb_tree.rs:384:12\n    |\n\nerror: rust-js does not support `size_of` of a type parameter yet\n   --> /Users/chauluu/Documents/Github/algorithms/build/one/data_structures-rb_tree/src/data_structures/rb_tree.rs:534:15\n    |"
+  },
+  "data_structures::segment_tree": {
+    "status": "same",
+    "tests": 3
+  },
+  "data_structures::segment_tree_recursive": {
+    "status": "same",
+    "tests": 3
+  },
+  "data_structures::skip_list": {
+    "status": "needs-crate",
+    "detail": "rand"
+  },
+  "data_structures::stack_using_singly_linked_list": {
+    "status": "same",
+    "tests": 5
+  },
+  "data_structures::treap": {
+    "status": "needs-crate",
+    "detail": "rand"
+  },
+  "data_structures::trie": {
+    "status": "refused",
+    "detail": "error: rust-js does not support a map of `Key` keys, whose class isn't given yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/data_structures-trie/src/data_structures/trie.rs:41:19\n   |\n\nerror: rust-js does not support a map of `Key` keys, whose class isn't given yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/data_structures-trie/src/data_structures/trie.rs:56:43\n   |"
+  },
+  "data_structures::union_find": {
+    "status": "same",
+    "tests": 3
+  },
+  "data_structures::veb_tree": {
+    "status": "needs-crate",
+    "detail": "rand"
+  },
+  "dynamic_programming::catalan_numbers": {
+    "status": "same",
+    "tests": 4
+  },
+  "dynamic_programming::coin_change": {
+    "status": "same",
+    "tests": 28
+  },
+  "dynamic_programming::egg_dropping": {
+    "status": "same",
+    "tests": 15
+  },
+  "dynamic_programming::fibonacci": {
+    "status": "refused",
+    "detail": "error: rust-js does not support calling `core::num::<impl u32>::bit_width` yet\n   --> /Users/chauluu/Documents/Github/algorithms/build/one/dynamic_programming-fibonacci/src/dynamic_programming/fibonacci.rs:196:20\n    |\n\nerror: rust-js does not support calling `std::borrow::ToOwned::to_owned` yet\n   --> /Users/chauluu/Documents/Github/algorithms/build/one/dynamic_programming-fibonacci/src/dynamic_programming/fibonacci.rs:216:41\n    |"
+  },
+  "dynamic_programming::fractional_knapsack": {
+    "status": "same",
+    "tests": 7
+  },
+  "dynamic_programming::integer_partition": {
+    "status": "same",
+    "tests": 7
+  },
+  "dynamic_programming::is_subsequence": {
+    "status": "same",
+    "tests": 18
+  },
+  "dynamic_programming::knapsack": {
+    "status": "same",
+    "tests": 13
+  },
+  "dynamic_programming::longest_common_subsequence": {
+    "status": "same",
+    "tests": 14
+  },
+  "dynamic_programming::longest_common_substring": {
+    "status": "same",
+    "tests": 15
+  },
+  "dynamic_programming::longest_continuous_increasing_subsequence": {
+    "status": "same",
+    "tests": 18
+  },
+  "dynamic_programming::longest_increasing_subsequence": {
+    "status": "same",
+    "tests": 6
+  },
+  "dynamic_programming::matrix_chain_multiply": {
+    "status": "same",
+    "tests": 7
+  },
+  "dynamic_programming::maximal_square": {
+    "status": "same",
+    "tests": 1
+  },
+  "dynamic_programming::maximum_subarray": {
+    "status": "same",
+    "tests": 18
+  },
+  "dynamic_programming::minimum_cost_path": {
+    "status": "same",
+    "tests": 12
+  },
+  "dynamic_programming::optimal_bst": {
+    "status": "same",
+    "tests": 7
+  },
+  "dynamic_programming::palindrome_partitioning": {
+    "status": "same",
+    "tests": 5
+  },
+  "dynamic_programming::rod_cutting": {
+    "status": "same",
+    "tests": 18
+  },
+  "dynamic_programming::smith_waterman": {
+    "status": "same",
+    "tests": 18
+  },
+  "dynamic_programming::snail": {
+    "status": "same",
+    "tests": 4
+  },
+  "dynamic_programming::subset_generation": {
+    "status": "same",
+    "tests": 4
+  },
+  "dynamic_programming::subset_sum": {
+    "status": "same",
+    "tests": 10
+  },
+  "dynamic_programming::task_assignment": {
+    "status": "same",
+    "tests": 6
+  },
+  "dynamic_programming::trapped_rainwater": {
+    "status": "same",
+    "tests": 10
+  },
+  "dynamic_programming::word_break": {
+    "status": "refused",
+    "detail": "error: rust-js does not support a map of `Key` keys, whose class isn't given yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/dynamic_programming-word_break/src/data_structures/trie.rs:41:19\n   |\n\nerror: rust-js does not support a map of `Key` keys, whose class isn't given yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/dynamic_programming-word_break/src/data_structures/trie.rs:56:43\n   |"
+  },
+  "financial::depreciation": {
+    "status": "same",
+    "tests": 29
+  },
+  "financial::equated_monthly_installments": {
+    "status": "same",
+    "tests": 1
+  },
+  "financial::exponential_moving_average": {
+    "status": "same",
+    "tests": 5
+  },
+  "financial::finance_ratios": {
+    "status": "same",
+    "tests": 4
+  },
+  "financial::interest": {
+    "status": "same",
+    "tests": 3
+  },
+  "financial::npv": {
+    "status": "same",
+    "tests": 3
+  },
+  "financial::npv_sensitivity": {
+    "status": "same",
+    "tests": 1
+  },
+  "financial::payback": {
+    "status": "same",
+    "tests": 2
+  },
+  "financial::present_value": {
+    "status": "same",
+    "tests": 9
+  },
+  "financial::treynor_ratio": {
+    "status": "same",
+    "tests": 2
+  },
+  "general::convex_hull": {
+    "status": "same",
+    "tests": 6
+  },
+  "general::genetic": {
+    "status": "needs-crate",
+    "detail": "rand"
+  },
+  "general::hanoi": {
+    "status": "same",
+    "tests": 1
+  },
+  "general::huffman_encoding": {
+    "status": "same",
+    "tests": 7
+  },
+  "general::kadane_algorithm": {
+    "status": "same",
+    "tests": 5
+  },
+  "general::kmeans": {
+    "status": "same",
+    "tests": 4
+  },
+  "general::mex": {
+    "status": "same",
+    "tests": 2
+  },
+  "general::permutations": {
+    "status": "needs-crate",
+    "detail": "quickcheck"
+  },
+  "general::permutations::heap": {
+    "status": "needs-crate",
+    "detail": "quickcheck, quickcheck_macros"
+  },
+  "general::permutations::naive": {
+    "status": "needs-crate",
+    "detail": "quickcheck, quickcheck_macros"
+  },
+  "general::permutations::steinhaus_johnson_trotter": {
+    "status": "needs-crate",
+    "detail": "quickcheck, quickcheck_macros"
+  },
+  "general::subarray_sum_equals_k": {
+    "status": "same",
+    "tests": 6
+  },
+  "general::two_sum": {
+    "status": "same",
+    "tests": 1
+  },
+  "geometry::closest_points": {
+    "status": "same",
+    "tests": 7
+  },
+  "geometry::graham_scan": {
+    "status": "same",
+    "tests": 9
+  },
+  "geometry::jarvis_scan": {
+    "status": "same",
+    "tests": 9
+  },
+  "geometry::polygon_points": {
+    "status": "same",
+    "tests": 6
+  },
+  "geometry::ramer_douglas_peucker": {
+    "status": "same",
+    "tests": 6
+  },
+  "geometry::segment": {
+    "status": "same",
+    "tests": 7
+  },
+  "graph::ant_colony_optimization": {
+    "status": "needs-crate",
+    "detail": "rand"
+  },
+  "graph::astar": {
+    "status": "needs-crate",
+    "detail": "num_traits"
+  },
+  "graph::bellman_ford": {
+    "status": "refused",
+    "detail": "error: rust-js does not support a map of `V` keys, whose class isn't given yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/graph-bellman_ford/src/graph/bellman_ford.rs:93:25\n   |"
+  },
+  "graph::bipartite_matching": {
+    "status": "same",
+    "tests": 6
+  },
+  "graph::breadth_first_search": {
+    "status": "same",
+    "tests": 4
+  },
+  "graph::centroid_decomposition": {
+    "status": "refused",
+    "detail": "error: rust-js does not support this call, for an `Option` of what could look like `None` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/graph-centroid_decomposition/src/graph/prufer_code.rs:21:23\n   |\n\nerror: rust-js does not support this call, for an `Option` of what could look like `None` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/graph-centroid_decomposition/src/graph/prufer_code.rs:60:27\n   |"
+  },
+  "graph::decremental_connectivity": {
+    "status": "same",
+    "tests": 4
+  },
+  "graph::depth_first_search": {
+    "status": "same",
+    "tests": 4
+  },
+  "graph::depth_first_search_tic_tac_toe": {
+    "status": "needs-crate",
+    "detail": "rand"
+  },
+  "graph::detect_cycle": {
+    "status": "same",
+    "tests": 15
+  },
+  "graph::dijkstra": {
+    "status": "refused",
+    "detail": "error: rust-js does not support a map of `V` keys, whose class isn't given yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/graph-dijkstra/src/graph/dijkstra.rs:60:25\n   |"
+  },
+  "graph::dinic_maxflow": {
+    "status": "same",
+    "tests": 1
+  },
+  "graph::disjoint_set_union": {
+    "status": "same",
+    "tests": 1
+  },
+  "graph::eulerian_path": {
+    "status": "same",
+    "tests": 21
+  },
+  "graph::floyd_warshall": {
+    "status": "needs-crate",
+    "detail": "num_traits"
+  },
+  "graph::ford_fulkerson": {
+    "status": "same",
+    "tests": 14
+  },
+  "graph::graph_enumeration": {
+    "status": "same",
+    "tests": 2
+  },
+  "graph::heavy_light_decomposition": {
+    "status": "same",
+    "tests": 2
+  },
+  "graph::kosaraju": {
+    "status": "same",
+    "tests": 5
+  },
+  "graph::lee_breadth_first_search": {
+    "status": "same",
+    "tests": 4
+  },
+  "graph::lowest_common_ancestor": {
+    "status": "same",
+    "tests": 1
+  },
+  "graph::minimum_spanning_tree": {
+    "status": "same",
+    "tests": 3
+  },
+  "graph::page_rank": {
+    "status": "refused",
+    "detail": "error: rust-js does not support values of type `&Node` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/graph-page_rank/src/graph/page_rank.rs:14:1\n   |"
+  },
+  "graph::prim": {
+    "status": "refused",
+    "detail": "error: rust-js does not support a map of `V` keys, whose class isn't given yet\n --> /Users/chauluu/Documents/Github/algorithms/build/one/graph-prim/src/graph/prim.rs:8:21\n  |"
+  },
+  "graph::prufer_code": {
+    "status": "refused",
+    "detail": "error: rust-js does not support this call, for an `Option` of what could look like `None` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/graph-prufer_code/src/graph/prufer_code.rs:21:23\n   |\n\nerror: rust-js does not support this call, for an `Option` of what could look like `None` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/graph-prufer_code/src/graph/prufer_code.rs:60:27\n   |"
+  },
+  "graph::strongly_connected_components": {
+    "status": "same",
+    "tests": 4
+  },
+  "graph::tarjans_ssc": {
+    "status": "same",
+    "tests": 1
+  },
+  "graph::topological_sort": {
+    "status": "same",
+    "tests": 3
+  },
+  "graph::two_satisfiability": {
+    "status": "refused",
+    "detail": "error: rust-js does not support calling `std::thread::Builder::new` yet\n   --> /Users/chauluu/Documents/Github/algorithms/build/one/graph-two_satisfiability/src/graph/two_satisfiability.rs:100:23\n    |"
+  },
+  "greedy::job_sequencing": {
+    "status": "same",
+    "tests": 10
+  },
+  "greedy::minimum_coin_change": {
+    "status": "same",
+    "tests": 10
+  },
+  "greedy::smallest_range": {
+    "status": "same",
+    "tests": 9
+  },
+  "greedy::stable_matching": {
+    "status": "differs",
+    "detail": "greedy::stable_matching::tests::test_stable_matching_duplicate_preferences: native pass, JS fail\ngreedy::stable_matching::tests::test_stable_matching_scenario_1: native pass, JS fail\ngreedy::stable_matching::tests::test_woman_prefers_new_man: native pass, JS fail\ngreedy::stable_matching::tests::test_stable_matching_single_pair: native pass, JS fail",
+    "tests": 5
+  },
+  "hashing::blake2b": {
+    "status": "same",
+    "tests": 5
+  },
+  "hashing::fletcher": {
+    "status": "same",
+    "tests": 5
+  },
+  "hashing::md5": {
+    "status": "same",
+    "tests": 10
+  },
+  "hashing::sha1": {
+    "status": "same",
+    "tests": 5
+  },
+  "hashing::sha2": {
+    "status": "same",
+    "tests": 17
+  },
+  "hashing::sha3": {
+    "status": "refused",
+    "detail": "error: rust-js does not support calling `std::ops::BitXorAssign::bitxor_assign` yet\n   --> /Users/chauluu/Documents/Github/algorithms/build/one/hashing-sha3/src/hashing/sha3.rs:235:13\n    |"
+  },
+  "machine_learning::cholesky": {
+    "status": "same",
+    "tests": 4
+  },
+  "machine_learning::decision_tree": {
+    "status": "same",
+    "tests": 12
+  },
+  "machine_learning::k_means": {
+    "status": "needs-crate",
+    "detail": "rand"
+  },
+  "machine_learning::k_nearest_neighbors": {
+    "status": "same",
+    "tests": 5
+  },
+  "machine_learning::linear_regression": {
+    "status": "same",
+    "tests": 2
+  },
+  "machine_learning::logistic_regression": {
+    "status": "same",
+    "tests": 3
+  },
+  "machine_learning::loss_function::average_margin_ranking_loss": {
+    "status": "same",
+    "tests": 11
+  },
+  "machine_learning::loss_function::hinge_loss": {
+    "status": "same",
+    "tests": 1
+  },
+  "machine_learning::loss_function::huber_loss": {
+    "status": "same",
+    "tests": 4
+  },
+  "machine_learning::loss_function::kl_divergence_loss": {
+    "status": "same",
+    "tests": 1
+  },
+  "machine_learning::loss_function::mean_absolute_error_loss": {
+    "status": "same",
+    "tests": 1
+  },
+  "machine_learning::loss_function::mean_squared_error_loss": {
+    "status": "same",
+    "tests": 1
+  },
+  "machine_learning::loss_function::negative_log_likelihood": {
+    "status": "same",
+    "tests": 9
+  },
+  "machine_learning::naive_bayes": {
+    "status": "same",
+    "tests": 8
+  },
+  "machine_learning::optimization::adam": {
+    "status": "same",
+    "tests": 16
+  },
+  "machine_learning::optimization::gradient_descent": {
+    "status": "same",
+    "tests": 2
+  },
+  "machine_learning::optimization::momentum": {
+    "status": "same",
+    "tests": 3
+  },
+  "machine_learning::perceptron": {
+    "status": "same",
+    "tests": 11
+  },
+  "machine_learning::principal_component_analysis": {
+    "status": "same",
+    "tests": 9
+  },
+  "machine_learning::random_forest": {
+    "status": "needs-crate",
+    "detail": "rand"
+  },
+  "machine_learning::support_vector_classifier": {
+    "status": "needs-crate",
+    "detail": "ndarray"
+  },
+  "math::abs": {
+    "status": "needs-crate",
+    "detail": "num_traits"
+  },
+  "math::aliquot_sum": {
+    "status": "same",
+    "tests": 16
+  },
+  "math::amicable_numbers": {
+    "status": "same",
+    "tests": 1
+  },
+  "math::area_of_polygon": {
+    "status": "same",
+    "tests": 3
+  },
+  "math::area_under_curve": {
+    "status": "same",
+    "tests": 4
+  },
+  "math::armstrong_number": {
+    "status": "same",
+    "tests": 5
+  },
+  "math::average": {
+    "status": "needs-crate",
+    "detail": "num_traits"
+  },
+  "math::baby_step_giant_step": {
+    "status": "differs",
+    "detail": "math::baby_step_giant_step::tests::random_numbers: native pass, JS fail\nmath::baby_step_giant_step::tests::primitive_root_tests: native pass, JS fail",
+    "tests": 4
+  },
+  "math::bell_numbers": {
+    "status": "needs-crate",
+    "detail": "num_bigint, num_traits"
+  },
+  "math::binary_exponentiation": {
+    "status": "same",
+    "tests": 2
+  },
+  "math::binomial_coefficient": {
+    "status": "needs-crate",
+    "detail": "num_bigint, num_traits"
+  },
+  "math::catalan_numbers": {
+    "status": "same",
+    "tests": 1
+  },
+  "math::ceil": {
+    "status": "same",
+    "tests": 7
+  },
+  "math::chinese_remainder_theorem": {
+    "status": "same",
+    "tests": 1
+  },
+  "math::collatz_sequence": {
+    "status": "same",
+    "tests": 1
+  },
+  "math::combinations": {
+    "status": "same",
+    "tests": 4
+  },
+  "math::cross_entropy_loss": {
+    "status": "same",
+    "tests": 1
+  },
+  "math::decimal_to_fraction": {
+    "status": "same",
+    "tests": 6
+  },
+  "math::doomsday": {
+    "status": "same",
+    "tests": 1
+  },
+  "math::elliptic_curve": {
+    "status": "needs-crate",
+    "detail": "rand"
+  },
+  "math::euclidean_distance": {
+    "status": "same",
+    "tests": 1
+  },
+  "math::exponential_linear_unit": {
+    "status": "refused",
+    "detail": "error: rust-js does not support calling `std::borrow::ToOwned::to_owned` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/math-exponential_linear_unit/src/math/exponential_linear_unit.rs:28:30\n   |"
+  },
+  "math::extended_euclidean_algorithm": {
+    "status": "same",
+    "tests": 1
+  },
+  "math::factorial": {
+    "status": "needs-crate",
+    "detail": "num_bigint, num_traits"
+  },
+  "math::factors": {
+    "status": "same",
+    "tests": 3
+  },
+  "math::fast_fourier_transform": {
+    "status": "same",
+    "tests": 3
+  },
+  "math::fast_power": {
+    "status": "differs",
+    "detail": "math::fast_power::tests::test: native pass, JS fail",
+    "tests": 1
+  },
+  "math::faster_perfect_numbers": {
+    "status": "same",
+    "tests": 1
+  },
+  "math::field": {
+    "status": "refused",
+    "detail": "error: rust-js does not support values of type `math::field::PrimeField<P>` yet\n   --> /Users/chauluu/Documents/Github/algorithms/build/one/math-field/src/math/field.rs:234:9\n    |"
+  },
+  "math::frizzy_number": {
+    "status": "same",
+    "tests": 1
+  },
+  "math::gaussian_elimination": {
+    "status": "same",
+    "tests": 1
+  },
+  "math::gaussian_error_linear_unit": {
+    "status": "refused",
+    "detail": "error: rust-js does not support calling `std::borrow::ToOwned::to_owned` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/math-gaussian_error_linear_unit/src/math/gaussian_error_linear_unit.rs:24:37\n   |\n\nerror: rust-js does not support calling `std::borrow::ToOwned::to_owned` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/math-gaussian_error_linear_unit/src/math/gaussian_error_linear_unit.rs:28:31\n   |"
+  },
+  "math::gcd_of_n_numbers": {
+    "status": "same",
+    "tests": 1
+  },
+  "math::geometric_series": {
+    "status": "same",
+    "tests": 1
+  },
+  "math::greatest_common_divisor": {
+    "status": "same",
+    "tests": 7
+  },
+  "math::huber_loss": {
+    "status": "same",
+    "tests": 1
+  },
+  "math::infix_to_postfix": {
+    "status": "same",
+    "tests": 14
+  },
+  "math::interest": {
+    "status": "same",
+    "tests": 2
+  },
+  "math::interpolation": {
+    "status": "same",
+    "tests": 2
+  },
+  "math::interquartile_range": {
+    "status": "same",
+    "tests": 3
+  },
+  "math::karatsuba_multiplication": {
+    "status": "same",
+    "tests": 3
+  },
+  "math::lcm_of_n_numbers": {
+    "status": "same",
+    "tests": 1
+  },
+  "math::leaky_relu": {
+    "status": "refused",
+    "detail": "error: rust-js does not support calling `std::borrow::ToOwned::to_owned` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/math-leaky_relu/src/math/leaky_relu.rs:23:30\n   |"
+  },
+  "math::least_square_approx": {
+    "status": "needs-crate",
+    "detail": "nalgebra"
+  },
+  "math::linear_sieve": {
+    "status": "same",
+    "tests": 4
+  },
+  "math::logarithm": {
+    "status": "same",
+    "tests": 5
+  },
+  "math::lucas_series": {
+    "status": "same",
+    "tests": 14
+  },
+  "math::matrix_ops": {
+    "status": "refused",
+    "detail": "error: rust-js does not support calling `std::convert::Into::into` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/math-matrix_ops/src/math/matrix_ops.rs:68:26\n   |\n\nerror: rust-js does not support calling `std::convert::Into::into` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/math-matrix_ops/src/math/matrix_ops.rs:79:34\n   |\n\nerror: rust-js does not support calling `std::convert::Into::into` yet\n   --> /Users/chauluu/Documents/Github/algorithms/build/one/math-matrix_ops/src/math/matrix_ops.rs:172:37\n    |"
+  },
+  "math::mersenne_primes": {
+    "status": "same",
+    "tests": 1
+  },
+  "math::miller_rabin": {
+    "status": "needs-crate",
+    "detail": "num_bigint, num_traits"
+  },
+  "math::modular_exponential": {
+    "status": "same",
+    "tests": 4
+  },
+  "math::newton_raphson": {
+    "status": "same",
+    "tests": 1
+  },
+  "math::nthprime": {
+    "status": "same",
+    "tests": 1
+  },
+  "math::pascal_triangle": {
+    "status": "same",
+    "tests": 1
+  },
+  "math::perfect_cube": {
+    "status": "same",
+    "tests": 12
+  },
+  "math::perfect_numbers": {
+    "status": "same",
+    "tests": 1
+  },
+  "math::perfect_square": {
+    "status": "same",
+    "tests": 2
+  },
+  "math::pollard_rho": {
+    "status": "needs-crate",
+    "detail": "num_bigint, num_traits"
+  },
+  "math::postfix_evaluation": {
+    "status": "same",
+    "tests": 17
+  },
+  "math::prime_check": {
+    "status": "same",
+    "tests": 1
+  },
+  "math::prime_factors": {
+    "status": "same",
+    "tests": 1
+  },
+  "math::prime_numbers": {
+    "status": "same",
+    "tests": 1
+  },
+  "math::quadratic_residue": {
+    "status": "needs-crate",
+    "detail": "rand"
+  },
+  "math::random": {
+    "status": "refused",
+    "detail": "error: rust-js: rust-js can't read the module it wrote: Unterminated multiline comment, at line 3: `/*`\n"
+  },
+  "math::relu": {
+    "status": "same",
+    "tests": 1
+  },
+  "math::sieve_of_eratosthenes": {
+    "status": "same",
+    "tests": 22
+  },
+  "math::sigmoid": {
+    "status": "same",
+    "tests": 1
+  },
+  "math::signum": {
+    "status": "same",
+    "tests": 3
+  },
+  "math::simpsons_integration": {
+    "status": "same",
+    "tests": 10
+  },
+  "math::softmax": {
+    "status": "same",
+    "tests": 1
+  },
+  "math::sprague_grundy_theorem": {
+    "status": "same",
+    "tests": 1
+  },
+  "math::square_pyramidal_numbers": {
+    "status": "same",
+    "tests": 1
+  },
+  "math::square_root": {
+    "status": "same",
+    "tests": 2
+  },
+  "math::sum_of_digits": {
+    "status": "same",
+    "tests": 8
+  },
+  "math::sum_of_geometric_progression": {
+    "status": "same",
+    "tests": 4
+  },
+  "math::sum_of_harmonic_series": {
+    "status": "same",
+    "tests": 1
+  },
+  "math::sylvester_sequence": {
+    "status": "same",
+    "tests": 2
+  },
+  "math::tanh": {
+    "status": "same",
+    "tests": 1
+  },
+  "math::trapezoidal_integration": {
+    "status": "same",
+    "tests": 6
+  },
+  "math::trial_division": {
+    "status": "same",
+    "tests": 1
+  },
+  "math::trig_functions": {
+    "status": "same",
+    "tests": 8
+  },
+  "math::vector_cross_product": {
+    "status": "same",
+    "tests": 5
+  },
+  "math::zellers_congruence_algorithm": {
+    "status": "same",
+    "tests": 1
+  },
+  "navigation::bearing": {
+    "status": "same",
+    "tests": 1
+  },
+  "navigation::haversine": {
+    "status": "same",
+    "tests": 1
+  },
+  "navigation::rhumbline": {
+    "status": "same",
+    "tests": 6
+  },
+  "number_theory::compute_totient": {
+    "status": "same",
+    "tests": 3
+  },
+  "number_theory::euler_totient": {
+    "status": "same",
+    "tests": 25
+  },
+  "number_theory::kth_factor": {
+    "status": "same",
+    "tests": 4
+  },
+  "searching::binary_search": {
+    "status": "same",
+    "tests": 33
+  },
+  "searching::binary_search_recursive": {
+    "status": "same",
+    "tests": 33
+  },
+  "searching::exponential_search": {
+    "status": "same",
+    "tests": 5
+  },
+  "searching::fibonacci_search": {
+    "status": "same",
+    "tests": 5
+  },
+  "searching::interpolation_search": {
+    "status": "same",
+    "tests": 5
+  },
+  "searching::jump_search": {
+    "status": "same",
+    "tests": 5
+  },
+  "searching::kth_smallest": {
+    "status": "needs-crate",
+    "detail": "rand"
+  },
+  "searching::kth_smallest_heap": {
+    "status": "same",
+    "tests": 3
+  },
+  "searching::linear_search": {
+    "status": "same",
+    "tests": 33
+  },
+  "searching::moore_voting": {
+    "status": "same",
+    "tests": 1
+  },
+  "searching::quick_select": {
+    "status": "same",
+    "tests": 1
+  },
+  "searching::saddleback_search": {
+    "status": "same",
+    "tests": 6
+  },
+  "searching::ternary_search": {
+    "status": "same",
+    "tests": 42
+  },
+  "searching::ternary_search_min_max": {
+    "status": "same",
+    "tests": 4
+  },
+  "searching::ternary_search_min_max_recursive": {
+    "status": "same",
+    "tests": 4
+  },
+  "searching::ternary_search_recursive": {
+    "status": "same",
+    "tests": 9
+  },
+  "signal_analysis::yin": {
+    "status": "same",
+    "tests": 5
+  },
+  "sorting": {
+    "status": "refused",
+    "detail": "error: rust-js does not support values of type `&T` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/sorting/src/sorting/mod.rs:57:34\n   |"
+  },
+  "sorting::bead_sort": {
+    "status": "refused",
+    "detail": "error: rust-js does not support values of type `&T` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/sorting-bead_sort/src/sorting/mod.rs:58:34\n   |"
+  },
+  "sorting::binary_insertion_sort": {
+    "status": "refused",
+    "detail": "error: rust-js does not support values of type `&T` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/sorting-binary_insertion_sort/src/sorting/mod.rs:58:34\n   |"
+  },
+  "sorting::bingo_sort": {
+    "status": "refused",
+    "detail": "error: rust-js does not support values of type `&T` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/sorting-bingo_sort/src/sorting/mod.rs:58:34\n   |"
+  },
+  "sorting::bitonic_sort": {
+    "status": "refused",
+    "detail": "error: rust-js does not support values of type `&T` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/sorting-bitonic_sort/src/sorting/mod.rs:58:34\n   |"
+  },
+  "sorting::bogo_sort": {
+    "status": "refused",
+    "detail": "error: rust-js does not support values of type `&T` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/sorting-bogo_sort/src/sorting/mod.rs:58:34\n   |"
+  },
+  "sorting::bubble_sort": {
+    "status": "refused",
+    "detail": "error: rust-js does not support values of type `&T` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/sorting-bubble_sort/src/sorting/mod.rs:58:34\n   |"
+  },
+  "sorting::bucket_sort": {
+    "status": "refused",
+    "detail": "error: rust-js does not support values of type `&T` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/sorting-bucket_sort/src/sorting/mod.rs:59:34\n   |"
+  },
+  "sorting::cocktail_shaker_sort": {
+    "status": "refused",
+    "detail": "error: rust-js does not support values of type `&T` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/sorting-cocktail_shaker_sort/src/sorting/mod.rs:58:34\n   |"
+  },
+  "sorting::comb_sort": {
+    "status": "refused",
+    "detail": "error: rust-js does not support values of type `&T` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/sorting-comb_sort/src/sorting/mod.rs:58:34\n   |"
+  },
+  "sorting::counting_sort": {
+    "status": "refused",
+    "detail": "error: rust-js does not support values of type `&T` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/sorting-counting_sort/src/sorting/mod.rs:58:34\n   |"
+  },
+  "sorting::cycle_sort": {
+    "status": "refused",
+    "detail": "error: rust-js does not support values of type `&T` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/sorting-cycle_sort/src/sorting/mod.rs:58:34\n   |"
+  },
+  "sorting::dutch_national_flag_sort": {
+    "status": "refused",
+    "detail": "error: rust-js does not support values of type `&T` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/sorting-dutch_national_flag_sort/src/sorting/mod.rs:58:34\n   |"
+  },
+  "sorting::exchange_sort": {
+    "status": "refused",
+    "detail": "error: rust-js does not support values of type `&T` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/sorting-exchange_sort/src/sorting/mod.rs:58:34\n   |"
+  },
+  "sorting::gnome_sort": {
+    "status": "refused",
+    "detail": "error: rust-js does not support values of type `&T` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/sorting-gnome_sort/src/sorting/mod.rs:58:34\n   |"
+  },
+  "sorting::heap_sort": {
+    "status": "refused",
+    "detail": "error: rust-js does not support values of type `&T` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/sorting-heap_sort/src/sorting/mod.rs:58:34\n   |"
+  },
+  "sorting::insertion_sort": {
+    "status": "refused",
+    "detail": "error: rust-js does not support values of type `&T` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/sorting-insertion_sort/src/sorting/mod.rs:58:34\n   |"
+  },
+  "sorting::intro_sort": {
+    "status": "refused",
+    "detail": "error: rust-js does not support values of type `&T` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/sorting-intro_sort/src/sorting/mod.rs:58:34\n   |"
+  },
+  "sorting::merge_sort": {
+    "status": "refused",
+    "detail": "error: rust-js does not support values of type `&T` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/sorting-merge_sort/src/sorting/mod.rs:58:34\n   |"
+  },
+  "sorting::odd_even_sort": {
+    "status": "refused",
+    "detail": "error: rust-js does not support values of type `&T` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/sorting-odd_even_sort/src/sorting/mod.rs:58:34\n   |"
+  },
+  "sorting::pancake_sort": {
+    "status": "refused",
+    "detail": "error: rust-js does not support values of type `&T` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/sorting-pancake_sort/src/sorting/mod.rs:58:34\n   |"
+  },
+  "sorting::patience_sort": {
+    "status": "refused",
+    "detail": "error: rust-js does not support values of type `&T` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/sorting-patience_sort/src/sorting/mod.rs:58:34\n   |"
+  },
+  "sorting::pigeonhole_sort": {
+    "status": "refused",
+    "detail": "error: rust-js does not support values of type `&T` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/sorting-pigeonhole_sort/src/sorting/mod.rs:58:34\n   |"
+  },
+  "sorting::quick_sort": {
+    "status": "needs-crate",
+    "detail": "rand"
+  },
+  "sorting::quick_sort_3_ways": {
+    "status": "needs-crate",
+    "detail": "rand"
+  },
+  "sorting::radix_sort": {
+    "status": "refused",
+    "detail": "error: rust-js does not support values of type `&T` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/sorting-radix_sort/src/sorting/mod.rs:58:34\n   |"
+  },
+  "sorting::selection_sort": {
+    "status": "refused",
+    "detail": "error: rust-js does not support values of type `&T` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/sorting-selection_sort/src/sorting/mod.rs:58:34\n   |"
+  },
+  "sorting::shell_sort": {
+    "status": "refused",
+    "detail": "error: rust-js does not support values of type `&T` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/sorting-shell_sort/src/sorting/mod.rs:58:34\n   |"
+  },
+  "sorting::sleep_sort": {
+    "status": "refused",
+    "detail": "error: rust-js does not support calling `std::thread::sleep` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/sorting-sleep_sort/src/sorting/sleep_sort.rs:12:13\n   |\n\nerror: rust-js does not support values of type `&T` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/sorting-sleep_sort/src/sorting/mod.rs:58:34\n   |"
+  },
+  "sorting::stooge_sort": {
+    "status": "refused",
+    "detail": "error: rust-js does not support values of type `&T` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/sorting-stooge_sort/src/sorting/mod.rs:58:34\n   |"
+  },
+  "sorting::strand_sort": {
+    "status": "refused",
+    "detail": "error: rust-js does not support values of type `&T` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/sorting-strand_sort/src/sorting/mod.rs:58:34\n   |"
+  },
+  "sorting::tim_sort": {
+    "status": "refused",
+    "detail": "error: rust-js does not support values of type `&T` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/sorting-tim_sort/src/sorting/mod.rs:59:34\n   |"
+  },
+  "sorting::tournament_sort": {
+    "status": "refused",
+    "detail": "error: rust-js does not support values of type `&T` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/sorting-tournament_sort/src/sorting/mod.rs:58:34\n   |"
+  },
+  "sorting::tree_sort": {
+    "status": "refused",
+    "detail": "error: rust-js does not support values of type `&T` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/sorting-tree_sort/src/sorting/mod.rs:58:34\n   |"
+  },
+  "sorting::wave_sort": {
+    "status": "refused",
+    "detail": "error: rust-js does not support values of type `&T` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/sorting-wave_sort/src/sorting/mod.rs:58:34\n   |"
+  },
+  "sorting::wiggle_sort": {
+    "status": "refused",
+    "detail": "error: rust-js does not support values of type `&T` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/sorting-wiggle_sort/src/sorting/mod.rs:58:34\n   |"
+  },
+  "string::aho_corasick": {
+    "status": "same",
+    "tests": 2
+  },
+  "string::anagram": {
+    "status": "same",
+    "tests": 23
+  },
+  "string::autocomplete_using_trie": {
+    "status": "refused",
+    "detail": "error: rust-js does not support `collect` into a `()`, from its MIR yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/string-autocomplete_using_trie/src/string/autocomplete_using_trie.rs:60:22\n   |"
+  },
+  "string::boyer_moore_search": {
+    "status": "same",
+    "tests": 16
+  },
+  "string::burrows_wheeler_transform": {
+    "status": "same",
+    "tests": 4
+  },
+  "string::duval_algorithm": {
+    "status": "same",
+    "tests": 19
+  },
+  "string::hamming_distance": {
+    "status": "same",
+    "tests": 14
+  },
+  "string::isogram": {
+    "status": "same",
+    "tests": 21
+  },
+  "string::isomorphism": {
+    "status": "same",
+    "tests": 8
+  },
+  "string::jaro_winkler_distance": {
+    "status": "same",
+    "tests": 1
+  },
+  "string::knuth_morris_pratt": {
+    "status": "same",
+    "tests": 21
+  },
+  "string::levenshtein_distance": {
+    "status": "same",
+    "tests": 2
+  },
+  "string::lipogram": {
+    "status": "same",
+    "tests": 6
+  },
+  "string::manacher": {
+    "status": "same",
+    "tests": 1
+  },
+  "string::palindrome": {
+    "status": "same",
+    "tests": 26
+  },
+  "string::pangram": {
+    "status": "same",
+    "tests": 17
+  },
+  "string::rabin_karp": {
+    "status": "same",
+    "tests": 20
+  },
+  "string::reverse": {
+    "status": "same",
+    "tests": 8
+  },
+  "string::run_length_encoding": {
+    "status": "same",
+    "tests": 6
+  },
+  "string::shortest_palindrome": {
+    "status": "same",
+    "tests": 12
+  },
+  "string::suffix_array": {
+    "status": "same",
+    "tests": 1
+  },
+  "string::suffix_array_manber_myers": {
+    "status": "same",
+    "tests": 7
+  },
+  "string::suffix_tree": {
+    "status": "same",
+    "tests": 1
+  },
+  "string::z_algorithm": {
+    "status": "same",
+    "tests": 14
+  }
+}
