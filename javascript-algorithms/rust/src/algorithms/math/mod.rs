@@ -3,6 +3,7 @@ pub mod factorial;
 pub mod fast_powering;
 pub mod fibonacci;
 pub mod horner_method;
+pub mod integer_partition;
 pub mod is_power_of_two;
 pub mod least_common_multiple;
 pub mod pascal_triangle;
