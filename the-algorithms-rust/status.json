@@ -749,8 +749,8 @@
     "tests": 3
   },
   "graph::page_rank": {
-    "status": "refused",
-    "detail": "error: rust-js does not support values of type `&Node` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/graph-page_rank/src/graph/page_rank.rs:14:1\n   |"
+    "status": "same",
+    "tests": 18
   },
   "graph::prim": {
     "status": "refused",
@@ -1153,8 +1153,8 @@
     "detail": "rand"
   },
   "math::random": {
-    "status": "refused",
-    "detail": "error: rust-js: rust-js can't read the module it wrote: Unterminated multiline comment, at line 3: `/*`\n"
+    "status": "same",
+    "tests": 1
   },
   "math::relu": {
     "status": "same",
@@ -1325,96 +1325,96 @@
     "tests": 5
   },
   "sorting": {
-    "status": "refused",
-    "detail": "error: rust-js does not support values of type `&T` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/sorting/src/sorting/mod.rs:57:34\n   |"
+    "status": "same",
+    "tests": 1
   },
   "sorting::bead_sort": {
-    "status": "refused",
-    "detail": "error: rust-js does not support values of type `&T` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/sorting-bead_sort/src/sorting/mod.rs:58:34\n   |"
+    "status": "same",
+    "tests": 2
   },
   "sorting::binary_insertion_sort": {
-    "status": "refused",
-    "detail": "error: rust-js does not support values of type `&T` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/sorting-binary_insertion_sort/src/sorting/mod.rs:58:34\n   |"
+    "status": "same",
+    "tests": 1
   },
   "sorting::bingo_sort": {
-    "status": "refused",
-    "detail": "error: rust-js does not support values of type `&T` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/sorting-bingo_sort/src/sorting/mod.rs:58:34\n   |"
+    "status": "same",
+    "tests": 7
   },
   "sorting::bitonic_sort": {
-    "status": "refused",
-    "detail": "error: rust-js does not support values of type `&T` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/sorting-bitonic_sort/src/sorting/mod.rs:58:34\n   |"
+    "status": "same",
+    "tests": 2
   },
   "sorting::bogo_sort": {
-    "status": "refused",
-    "detail": "error: rust-js does not support values of type `&T` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/sorting-bogo_sort/src/sorting/mod.rs:58:34\n   |"
+    "status": "same",
+    "tests": 2
   },
   "sorting::bubble_sort": {
-    "status": "refused",
-    "detail": "error: rust-js does not support values of type `&T` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/sorting-bubble_sort/src/sorting/mod.rs:58:34\n   |"
+    "status": "same",
+    "tests": 3
   },
   "sorting::bucket_sort": {
-    "status": "refused",
-    "detail": "error: rust-js does not support values of type `&T` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/sorting-bucket_sort/src/sorting/mod.rs:59:34\n   |"
+    "status": "same",
+    "tests": 6
   },
   "sorting::cocktail_shaker_sort": {
-    "status": "refused",
-    "detail": "error: rust-js does not support values of type `&T` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/sorting-cocktail_shaker_sort/src/sorting/mod.rs:58:34\n   |"
+    "status": "same",
+    "tests": 4
   },
   "sorting::comb_sort": {
-    "status": "refused",
-    "detail": "error: rust-js does not support values of type `&T` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/sorting-comb_sort/src/sorting/mod.rs:58:34\n   |"
+    "status": "same",
+    "tests": 3
   },
   "sorting::counting_sort": {
-    "status": "refused",
-    "detail": "error: rust-js does not support values of type `&T` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/sorting-counting_sort/src/sorting/mod.rs:58:34\n   |"
+    "status": "same",
+    "tests": 4
   },
   "sorting::cycle_sort": {
-    "status": "refused",
-    "detail": "error: rust-js does not support values of type `&T` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/sorting-cycle_sort/src/sorting/mod.rs:58:34\n   |"
+    "status": "same",
+    "tests": 1
   },
   "sorting::dutch_national_flag_sort": {
-    "status": "refused",
-    "detail": "error: rust-js does not support values of type `&T` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/sorting-dutch_national_flag_sort/src/sorting/mod.rs:58:34\n   |"
+    "status": "same",
+    "tests": 2
   },
   "sorting::exchange_sort": {
-    "status": "refused",
-    "detail": "error: rust-js does not support values of type `&T` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/sorting-exchange_sort/src/sorting/mod.rs:58:34\n   |"
+    "status": "same",
+    "tests": 1
   },
   "sorting::gnome_sort": {
-    "status": "refused",
-    "detail": "error: rust-js does not support values of type `&T` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/sorting-gnome_sort/src/sorting/mod.rs:58:34\n   |"
+    "status": "same",
+    "tests": 5
   },
   "sorting::heap_sort": {
-    "status": "refused",
-    "detail": "error: rust-js does not support values of type `&T` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/sorting-heap_sort/src/sorting/mod.rs:58:34\n   |"
+    "status": "same",
+    "tests": 9
   },
   "sorting::insertion_sort": {
-    "status": "refused",
-    "detail": "error: rust-js does not support values of type `&T` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/sorting-insertion_sort/src/sorting/mod.rs:58:34\n   |"
+    "status": "same",
+    "tests": 6
   },
   "sorting::intro_sort": {
-    "status": "refused",
-    "detail": "error: rust-js does not support values of type `&T` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/sorting-intro_sort/src/sorting/mod.rs:58:34\n   |"
+    "status": "same",
+    "tests": 1
   },
   "sorting::merge_sort": {
-    "status": "refused",
-    "detail": "error: rust-js does not support values of type `&T` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/sorting-merge_sort/src/sorting/mod.rs:58:34\n   |"
+    "status": "same",
+    "tests": 12
   },
   "sorting::odd_even_sort": {
-    "status": "refused",
-    "detail": "error: rust-js does not support values of type `&T` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/sorting-odd_even_sort/src/sorting/mod.rs:58:34\n   |"
+    "status": "same",
+    "tests": 4
   },
   "sorting::pancake_sort": {
-    "status": "refused",
-    "detail": "error: rust-js does not support values of type `&T` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/sorting-pancake_sort/src/sorting/mod.rs:58:34\n   |"
+    "status": "same",
+    "tests": 5
   },
   "sorting::patience_sort": {
-    "status": "refused",
-    "detail": "error: rust-js does not support values of type `&T` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/sorting-patience_sort/src/sorting/mod.rs:58:34\n   |"
+    "status": "same",
+    "tests": 4
   },
   "sorting::pigeonhole_sort": {
-    "status": "refused",
-    "detail": "error: rust-js does not support values of type `&T` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/sorting-pigeonhole_sort/src/sorting/mod.rs:58:34\n   |"
+    "status": "same",
+    "tests": 1
   },
   "sorting::quick_sort": {
     "status": "needs-crate",
@@ -1425,48 +1425,48 @@
     "detail": "rand"
   },
   "sorting::radix_sort": {
-    "status": "refused",
-    "detail": "error: rust-js does not support values of type `&T` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/sorting-radix_sort/src/sorting/mod.rs:58:34\n   |"
+    "status": "same",
+    "tests": 3
   },
   "sorting::selection_sort": {
-    "status": "refused",
-    "detail": "error: rust-js does not support values of type `&T` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/sorting-selection_sort/src/sorting/mod.rs:58:34\n   |"
+    "status": "same",
+    "tests": 4
   },
   "sorting::shell_sort": {
-    "status": "refused",
-    "detail": "error: rust-js does not support values of type `&T` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/sorting-shell_sort/src/sorting/mod.rs:58:34\n   |"
+    "status": "same",
+    "tests": 4
   },
   "sorting::sleep_sort": {
     "status": "refused",
-    "detail": "error: rust-js does not support calling `std::thread::sleep` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/sorting-sleep_sort/src/sorting/sleep_sort.rs:12:13\n   |\n\nerror: rust-js does not support values of type `&T` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/sorting-sleep_sort/src/sorting/mod.rs:58:34\n   |"
+    "detail": "error: rust-js does not support calling `std::thread::sleep` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/sorting-sleep_sort/src/sorting/sleep_sort.rs:12:13\n   |"
   },
   "sorting::stooge_sort": {
-    "status": "refused",
-    "detail": "error: rust-js does not support values of type `&T` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/sorting-stooge_sort/src/sorting/mod.rs:58:34\n   |"
+    "status": "same",
+    "tests": 4
   },
   "sorting::strand_sort": {
-    "status": "refused",
-    "detail": "error: rust-js does not support values of type `&T` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/sorting-strand_sort/src/sorting/mod.rs:58:34\n   |"
+    "status": "same",
+    "tests": 10
   },
   "sorting::tim_sort": {
-    "status": "refused",
-    "detail": "error: rust-js does not support values of type `&T` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/sorting-tim_sort/src/sorting/mod.rs:59:34\n   |"
+    "status": "same",
+    "tests": 10
   },
   "sorting::tournament_sort": {
-    "status": "refused",
-    "detail": "error: rust-js does not support values of type `&T` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/sorting-tournament_sort/src/sorting/mod.rs:58:34\n   |"
+    "status": "same",
+    "tests": 6
   },
   "sorting::tree_sort": {
-    "status": "refused",
-    "detail": "error: rust-js does not support values of type `&T` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/sorting-tree_sort/src/sorting/mod.rs:58:34\n   |"
+    "status": "same",
+    "tests": 5
   },
   "sorting::wave_sort": {
-    "status": "refused",
-    "detail": "error: rust-js does not support values of type `&T` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/sorting-wave_sort/src/sorting/mod.rs:58:34\n   |"
+    "status": "same",
+    "tests": 5
   },
   "sorting::wiggle_sort": {
-    "status": "refused",
-    "detail": "error: rust-js does not support values of type `&T` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/sorting-wiggle_sort/src/sorting/mod.rs:58:34\n   |"
+    "status": "same",
+    "tests": 3
   },
   "string::aho_corasick": {
     "status": "same",
