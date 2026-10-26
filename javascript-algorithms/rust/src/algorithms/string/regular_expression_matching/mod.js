@@ -24,8 +24,7 @@ function regularExpressionMatching(string, pattern) {
   const matchMatrix = Array.from({ length: n$1 }, () => value.slice());
 
   // Address empty pattern and empty string case.
-  const items = $index(matchMatrix, 0);
-  items[$at(items, 0)] = true;
+  matchMatrix[0][$at(matchMatrix[0], 0)] = true;
 
   // Deal with first row of the matrix, which is all `false` but where a
   // `*` repeats what's before it none, `a*` of an empty string.
@@ -33,9 +32,8 @@ function regularExpressionMatching(string, pattern) {
     const patternIndex = columnIndex - 1;
 
     if (pattern[patternIndex] === ZERO_OR_MORE_CHARS) {
-      const value = $index($index(matchMatrix, 0), (columnIndex - 2) >>> 0);
-      const items = $index(matchMatrix, 0);
-      items[$at(items, columnIndex)] = value;
+      const value = $index(matchMatrix[0], (columnIndex - 2) >>> 0);
+      matchMatrix[0][$at(matchMatrix[0], columnIndex)] = value;
     }
   }
 

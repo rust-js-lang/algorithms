@@ -45,11 +45,11 @@ function jumpSearch(sortedArray, seekElement, comparatorCallback) {
   // Do linear search for seekElement in subarray starting from blockStart.
   let currentIndex = blockStart;
   while (currentIndex < Math.min(blockEnd, arraySize)) {
-    if (comparator.equal($index(sortedArray, currentIndex), seekElement)) {
-      return currentIndex | 0;
+    if (comparator.equal(sortedArray[currentIndex], seekElement)) {
+      return currentIndex;
     }
 
-    currentIndex = (currentIndex + 1) >>> 0;
+    currentIndex++;
   }
 
   return -1;

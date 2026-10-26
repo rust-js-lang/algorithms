@@ -1,7 +1,7 @@
 {
-  "ports": 95,
-  "tests": 158,
-  "same": 158,
+  "ports": 99,
+  "tests": 162,
+  "same": 162,
   "status": {
     "Comparator.test.js > Comparator > should compare with custom comparator function": "same",
     "Comparator.test.js > Comparator > should compare with default comparator function": "same",
@@ -150,6 +150,10 @@
     "railFenceCipher.test.js > railFenceCipher > decodes a string correctly for base=4": "same",
     "railFenceCipher.test.js > railFenceCipher > encodes a string correctly for base=3": "same",
     "railFenceCipher.test.js > railFenceCipher > encodes a string correctly for base=4": "same",
+    "recursiveStaircaseBF.test.js > recursiveStaircaseBF > should calculate number of variants using Brute Force solution": "same",
+    "recursiveStaircaseDP.test.js > recursiveStaircaseDP > should calculate number of variants using Dynamic Programming solution": "same",
+    "recursiveStaircaseIT.test.js > recursiveStaircaseIT > should calculate number of variants using Iterative solution": "same",
+    "recursiveStaircaseMEM.test.js > recursiveStaircaseMEM > should calculate number of variants using Brute Force with Memoization": "same",
     "regularExpressionMatching.test.js > regularExpressionMatching > should match regular expressions in a string": "same",
     "setBit.test.js > setBit > should set bit at specific position": "same",
     "shortestCommonSupersequence.test.js > shortestCommonSupersequence > should find shortest common supersequence of two sequences": "same",
