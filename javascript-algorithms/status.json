@@ -1,7 +1,7 @@
 {
-  "ports": 100,
-  "tests": 166,
-  "same": 166,
+  "ports": 103,
+  "tests": 169,
+  "same": 169,
   "status": {
     "Comparator.test.js > Comparator > should compare with custom comparator function": "same",
     "Comparator.test.js > Comparator > should compare with default comparator function": "same",
@@ -45,6 +45,7 @@
     "bitsToFloat.test.js > bitsToFloat32 > should convert floating point binary bits to floating point decimal number": "same",
     "bitsToFloat.test.js > bitsToFloat64 > should convert floating point binary bits to floating point decimal number": "same",
     "btPowerSet.test.js > btPowerSet > should calculate power set of given set using backtracking approach": "same",
+    "btUniquePaths.test.js > btUniquePaths > should find the number of unique paths on board": "same",
     "bwPowerSet.test.js > bwPowerSet > should calculate power set of given set using bitwise approach": "same",
     "caPowerSet.test.js > caPowerSet > should calculate power set of given set using cascading approach": "same",
     "caesarCipher.test.js > caesarCipher > should be case insensitive": "same",
@@ -71,6 +72,7 @@
     "dpMaximumSubarray.test.js > dpMaximumSubarray > should find maximum subarray using the dynamic programming algorithm": "same",
     "dpRainTerraces.test.js > dpRainTerraces > should find the amount of water collected after raining": "same",
     "dpTopDownJumpGame.test.js > dpTopDownJumpGame > should solve Jump Game problem in top-down dynamic programming manner": "same",
+    "dpUniquePaths.test.js > dpUniquePaths > should find the number of unique paths on board": "same",
     "dqBestTimeToBuySellStocks.test.js > dqBestTimeToBuySellStocks > should find the best time to buy and sell stocks": "same",
     "euclideanAlgorithm.test.js > euclideanAlgorithm > should calculate GCD recursively": "same",
     "euclideanAlgorithmIterative.test.js > euclideanAlgorithmIterative > should calculate GCD iteratively": "same",
@@ -167,6 +169,7 @@
     "squareRoot.test.js > squareRoot > should throw for negative numbers": "same",
     "switchSign.test.js > switchSign > should switch the sign of the number using twos complement approach": "same",
     "trialDivision.test.js > trialDivision > should detect prime numbers": "same",
+    "uniquePaths.test.js > uniquePaths > should find the number of unique paths on board": "same",
     "updateBit.test.js > updateBit > should update bit at specific position": "same",
     "zAlgorithm.test.js > zAlgorithm > should find word positions in given text": "same"
   }
