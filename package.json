@@ -1,0 +1,13 @@
+{
+  "name": "algorithms",
+  "private": true,
+  "type": "module",
+  "description": "TheAlgorithms/rust and trekhleb/javascript-algorithms, compiled to JavaScript by rust-js, each checked against its original.",
+  "scripts": {
+    "rust": "bun scripts/the-algorithms-rust.ts"
+  },
+  "dependencies": {
+    "@rust-js/runtime": "file:../rust-js/runtime",
+    "@rust-js/std": "file:../rust-js/std"
+  }
+}
