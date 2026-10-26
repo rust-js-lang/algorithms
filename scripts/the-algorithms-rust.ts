@@ -23,7 +23,7 @@ const statusFile = join(crate, "status.json");
 const nativeFile = join(root, "build", "native.json");
 const rustJs = process.env.RUST_JS ?? join(root, "..", "rust-js", "target", "debug", "rust-js");
 
-type Status = { status: "same" | "differs" | "refused" | "crashed" | "needs-crate"; detail?: string; tests?: number };
+type Status = { status: "same" | "differs" | "refused" | "crashed" | "needs-crate" | "64-bit"; detail?: string; tests?: number };
 type Statuses = Record<string, Status>;
 type Results = Record<string, "pass" | "fail">;
 
@@ -258,13 +258,65 @@ function jsResults(report: string): Results {
 }
 
 /** One algorithm: built alone, compiled, its tests run and compared. */
-function one(module: string, native: Results): Status {
+// rust-js's toolchain, whose rustc builds the native side as rust-js's does.
+const toolchain = readFileSync(join(root, "..", "rust-js", "rust-toolchain.toml"), "utf8").match(/channel = "([^"]+)"/)![1];
+
+/** Each `#[should_panic]` test's function name of `text`. */
+const shouldPanic = (text: string) =>
+  new Set([...text.matchAll(/#\[should_panic[^\]]*\]\s*(?:#\[[^\]]*\]\s*)*fn\s+(\w+)/g)].map((m) => m[1]));
+
+/** The prepared crate's tests natively, as rust-js's JS should run them:
+ * built for wasm32-wasip1, whose `usize` is rust-js's 32 bits, overflow
+ * unchecked as rust-js's is (ADR 0090), each run on its own under Bun's
+ * WASI. A `#[should_panic]` one aborts there, so its outcome is the host's,
+ * `host`. An error where it doesn't build for 32 bits. */
+async function nativeOf(dir: string, texts: string, host: Results): Promise<Results | string> {
+  const wasm = join(dir, "tests.wasm");
+  const built = spawnSync(
+    "rustc",
+    [`+${toolchain}`, "--edition=2021", "--test", "--target=wasm32-wasip1", "-Coverflow-checks=off", "-Awarnings", "--cfg", 'feature="big-math"', "--crate-name=the_algorithms_rust", join(dir, "src", "lib.rs"), "-o", wasm],
+    { encoding: "utf8", timeout: 240_000 },
+  );
+  if (built.status !== 0) {
+    const errors = (built.stderr ?? "").split(/\n(?=error)/).filter((b) => b.startsWith("error") && !/aborting due to/.test(b));
+    return errors.slice(0, 2).map((b) => b.split("\n").slice(0, 6).join("\n")).join("\n\n");
+  }
+  const runner = join(root, "scripts", "wasi-run.ts");
+  const names = spawnSync("bun", [runner, wasm, "--list", "--format", "terse"], { encoding: "utf8" })
+    .stdout.split("\n")
+    .filter((l) => l.endsWith(": test"))
+    .map((l) => l.slice(0, -": test".length));
+  const panicking = shouldPanic(texts);
+  const results: Results = {};
+  let next = 0;
+  await Promise.all(
+    Array.from({ length: 8 }, async () => {
+      while (next < names.length) {
+        const name = names[next++];
+        if (panicking.has(name.split("::").at(-1)!) && host[name]) {
+          results[name] = host[name];
+          continue;
+        }
+        const p = Bun.spawn(["bun", runner, wasm, name, "--exact", "--test-threads=1"], { stdout: "ignore", stderr: "ignore" });
+        const timer = setTimeout(() => p.kill(), 60_000);
+        const code = await p.exited;
+        clearTimeout(timer);
+        results[name] = code === 0 ? "pass" : "fail";
+      }
+    }),
+  );
+  return results;
+}
+
+async function one(module: string, host: Results): Promise<Status> {
   const kept = needed(module);
   const texts = [...kept].map(readSource).join("\n");
   const crates = externalCrates.filter((c) => new RegExp(`\\b${c}::|use\\s+${c}\\b`).test(texts));
   if (crates.length) return { status: "needs-crate", detail: crates.join(", ") };
   const dir = join(root, "build", "one", module.replaceAll("::", "-"));
   prepare(dir, kept);
+  const native = await nativeOf(dir, texts, host);
+  if (typeof native === "string") return { status: "64-bit", detail: native };
   const lib = join(dir, "js", "lib.js");
   const compiled = spawnSync(rustJs, ["--test", join(dir, "src", "lib.rs"), "-o", lib, "--", "--edition=2021", "-Awarnings", "--cfg", 'feature="big-math"'], {
     encoding: "utf8",
@@ -331,13 +383,13 @@ async function native() {
   console.log(`native: ${names.length} tests, ${Object.values(results).filter((r) => r === "fail").length} failed`);
 }
 
-function run(list: string[]) {
-  const native = readJson<Results>(nativeFile, {});
-  if (Object.keys(native).length === 0) throw new Error("no native results: run `native` first");
+async function run(list: string[]) {
+  const host = readJson<Results>(nativeFile, {});
+  if (Object.keys(host).length === 0) throw new Error("no native results: run `native` first");
   const statuses = readJson<Statuses>(statusFile, {});
   for (const module of list) {
     const started = Date.now();
-    const status = one(module, native);
+    const status = await one(module, host);
     statuses[module] = status;
     writeStatuses(statuses);
     console.log(`${status.status.padEnd(11)} ${module} (${((Date.now() - started) / 1000).toFixed(1)} s)`);
@@ -348,10 +400,10 @@ function run(list: string[]) {
 if (import.meta.main) {
   const [step = "list", arg] = process.argv.slice(2);
   if (step === "native") await native();
-  if (step === "one") run([arg]);
+  if (step === "one") await run([arg]);
   if (step === "next") {
     const statuses = readJson<Statuses>(statusFile, {});
-    run(algorithms().filter((m) => statuses[m]?.status !== "same" && statuses[m]?.status !== "needs-crate").slice(0, Number(arg ?? 1)));
+    await run(algorithms().filter((m) => statuses[m]?.status !== "same" && statuses[m]?.status !== "needs-crate").slice(0, Number(arg ?? 1)));
   }
   if (step === "list") {
     const statuses = readJson<Statuses>(statusFile, {});

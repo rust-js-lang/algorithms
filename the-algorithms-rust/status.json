@@ -197,8 +197,7 @@
     "tests": 1
   },
   "ciphers::tea": {
-    "status": "differs",
-    "detail": "ciphers::tea::test::test_tea_encdec: native pass, JS missing\nciphers::tea::test::test_block_convert: native pass, JS missing\nciphers::tea::test::test_tea_encrypt: native pass, JS missing",
+    "status": "same",
     "tests": 3
   },
   "ciphers::theoretical_rot13": {
@@ -790,8 +789,7 @@
     "tests": 9
   },
   "greedy::stable_matching": {
-    "status": "differs",
-    "detail": "greedy::stable_matching::tests::test_stable_matching_duplicate_preferences: native pass, JS fail\ngreedy::stable_matching::tests::test_stable_matching_scenario_1: native pass, JS fail\ngreedy::stable_matching::tests::test_woman_prefers_new_man: native pass, JS fail\ngreedy::stable_matching::tests::test_stable_matching_single_pair: native pass, JS fail",
+    "status": "same",
     "tests": 5
   },
   "hashing::blake2b": {
@@ -931,8 +929,7 @@
     "detail": "num_traits"
   },
   "math::baby_step_giant_step": {
-    "status": "differs",
-    "detail": "math::baby_step_giant_step::tests::random_numbers: native pass, JS fail\nmath::baby_step_giant_step::tests::primitive_root_tests: native pass, JS fail",
+    "status": "same",
     "tests": 4
   },
   "math::bell_numbers": {
@@ -1008,8 +1005,7 @@
     "tests": 3
   },
   "math::fast_power": {
-    "status": "differs",
-    "detail": "math::fast_power::tests::test: native pass, JS fail",
+    "status": "same",
     "tests": 1
   },
   "math::faster_perfect_numbers": {

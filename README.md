@@ -13,7 +13,12 @@ Two ports, each checked against its original, to find and close gaps in
 
 Each algorithm is checked on its own: its module, with only the modules it
 uses, is built alone, its `#[test]`s compiled by rust-js and run by bun, and
-each test's outcome compared with the same test's natively. Its status is
+each test's outcome compared with the same test's natively. Natively is as
+rust-js's JS should run it: built by rust-js's rustc for `wasm32-wasip1`,
+whose `usize` is rust-js's 32 bits, with overflow unchecked as rust-js's is,
+and run under Bun's WASI (`scripts/wasi-run.ts`); a `#[should_panic]` test,
+which aborts there, keeps the host's outcome. `64-bit` is one that doesn't
+build where `usize` is 32 bits. Its status is
 in `the-algorithms-rust/status.json`: `same`, or what differs, a gap fixed
 in rust-js. `needs-crate` is one that uses an external crate (`rand`,
 `num-bigint`, `nalgebra`, `ndarray`, `quickcheck`), which rust-js's tests
