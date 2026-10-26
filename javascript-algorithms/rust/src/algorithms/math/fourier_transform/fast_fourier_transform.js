@@ -70,8 +70,7 @@ function fastFourierTransform(inputData, inverse) {
 
         output[$at(output, signalId)] = upd1;
         const index = (signalId + ((blockLength / 2) >>> 0)) >>> 0;
-        $index(output, index);
-        $assign(output[index], upd2);
+        output[$at(output, index)] = upd2;
 
         phase = phase.multiply(copyOf(phaseStep));
       }
