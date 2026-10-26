@@ -1,0 +1,1 @@
+{"version":3,"file":"divide_by_two.js","names":["divide_by_two","number: i32"],"sources":["divide_by_two.rs"],"sourcesContent":["/// `number` halved, by shifting it right a bit.\npub fn divide_by_two(number: i32) -> i32 {\n    number >> 1\n}\n\njs::export_default!(divide_by_two);\n"],"mappings":";;;AACA,SAAOA,YAAcC;EACjB,iBAAU"}

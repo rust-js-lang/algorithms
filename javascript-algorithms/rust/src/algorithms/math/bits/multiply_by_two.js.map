@@ -1,0 +1,1 @@
+{"version":3,"file":"multiply_by_two.js","names":["multiply_by_two","number: i32"],"sources":["multiply_by_two.rs"],"sourcesContent":["/// `number` doubled, by shifting it left a bit.\npub fn multiply_by_two(number: i32) -> i32 {\n    number << 1\n}\n\njs::export_default!(multiply_by_two);\n"],"mappings":";;;AACA,SAAOA,cAAgBC;EACnB,iBAAU"}

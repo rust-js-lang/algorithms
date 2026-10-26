@@ -1,0 +1,1 @@
+{"version":3,"file":"is_even.js","names":["is_even","number: i32"],"sources":["is_even.rs"],"sourcesContent":["/// Whether `number` is even: its last bit clear.\npub fn is_even(number: i32) -> bool {\n    (number & 1) == 0\n}\n\njs::export_default!(is_even);\n"],"mappings":";;;AACA,SAAOA,OAAQC;EACX,QAAC,SAAS,OAAM"}

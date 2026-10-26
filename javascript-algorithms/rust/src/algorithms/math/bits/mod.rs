@@ -1,0 +1,16 @@
+pub mod bit_length;
+pub mod bits_diff;
+pub mod clear_bit;
+pub mod count_set_bits;
+pub mod divide_by_two;
+pub mod full_adder;
+pub mod get_bit;
+pub mod is_even;
+pub mod is_positive;
+pub mod is_power_of_two;
+pub mod multiply;
+pub mod multiply_by_two;
+pub mod multiply_unsigned;
+pub mod set_bit;
+pub mod switch_sign;
+pub mod update_bit;

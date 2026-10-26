@@ -1,0 +1,1 @@
+{"version":3,"file":"switch_sign.js","names":["switch_sign","number: i32"],"sources":["switch_sign.rs"],"sourcesContent":["/// `-number`, by two's complement: its bits flipped, plus one.\npub fn switch_sign(number: i32) -> i32 {\n    !number + 1\n}\n\njs::export_default!(switch_sign);\n"],"mappings":";;;AACA,SAAOA,WAAYC;EACf,SAAC,SAAS"}

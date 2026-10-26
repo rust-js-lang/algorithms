@@ -1,3 +1,4 @@
+pub mod bits;
 pub mod euclidean_algorithm;
 pub mod factorial;
 pub mod fast_powering;
