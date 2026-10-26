@@ -453,8 +453,8 @@
     "tests": 15
   },
   "dynamic_programming::fibonacci": {
-    "status": "refused",
-    "detail": "error: rust-js does not support calling `core::num::<impl u32>::bit_width` yet\n   --> /Users/chauluu/Documents/Github/algorithms/build/one/dynamic_programming-fibonacci/src/dynamic_programming/fibonacci.rs:196:20\n    |"
+    "status": "same",
+    "tests": 11
   },
   "dynamic_programming::fractional_knapsack": {
     "status": "same",
@@ -681,8 +681,8 @@
     "tests": 4
   },
   "graph::centroid_decomposition": {
-    "status": "refused",
-    "detail": "error: rust-js does not support this call, for an `Option` of what could look like `None` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/graph-centroid_decomposition/src/graph/prufer_code.rs:21:23\n   |\n\nerror: rust-js does not support this call, for an `Option` of what could look like `None` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/graph-centroid_decomposition/src/graph/prufer_code.rs:60:27\n   |"
+    "status": "same",
+    "tests": 2
   },
   "graph::decremental_connectivity": {
     "status": "same",
@@ -757,8 +757,8 @@
     "tests": 9
   },
   "graph::prufer_code": {
-    "status": "refused",
-    "detail": "error: rust-js does not support this call, for an `Option` of what could look like `None` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/graph-prufer_code/src/graph/prufer_code.rs:21:23\n   |\n\nerror: rust-js does not support this call, for an `Option` of what could look like `None` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/graph-prufer_code/src/graph/prufer_code.rs:60:27\n   |"
+    "status": "same",
+    "tests": 1
   },
   "graph::strongly_connected_components": {
     "status": "same",
@@ -813,8 +813,8 @@
     "tests": 17
   },
   "hashing::sha3": {
-    "status": "refused",
-    "detail": "error: rust-js does not support calling `std::ops::BitXorAssign::bitxor_assign` yet\n   --> /Users/chauluu/Documents/Github/algorithms/build/one/hashing-sha3/src/hashing/sha3.rs:235:13\n    |"
+    "status": "same",
+    "tests": 12
   },
   "machine_learning::cholesky": {
     "status": "same",
