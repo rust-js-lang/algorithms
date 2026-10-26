@@ -1,7 +1,7 @@
 {
-  "ports": 22,
-  "tests": 28,
-  "same": 28,
+  "ports": 23,
+  "tests": 32,
+  "same": 32,
   "status": {
     "classicPolynome.test.js > classicPolynome > should evaluate the polynomial for the specified value of x correctly": "same",
     "degreeToRadian.test.js > degreeToRadian > should convert degree to radian": "same",
@@ -20,6 +20,10 @@
     "isPowerOfTwo.test.js > isPowerOfTwo > should check if the number is made by multiplying twos": "same",
     "isPowerOfTwoBitwise.test.js > isPowerOfTwoBitwise > should check if the number is made by multiplying twos": "same",
     "leastCommonMultiple.test.js > leastCommonMultiple > should find least common multiple": "same",
+    "liuHui.test.js > liuHui > should calculate π based on 12-gon": "same",
+    "liuHui.test.js > liuHui > should calculate π based on 201326592-gon": "same",
+    "liuHui.test.js > liuHui > should calculate π based on 24-gon": "same",
+    "liuHui.test.js > liuHui > should calculate π based on 6144-gon": "same",
     "pascalTriangle.test.js > pascalTriangle > should calculate Pascal Triangle coefficients for specific line number": "same",
     "pascalTriangleRecursive.test.js > pascalTriangleRecursive > should calculate Pascal Triangle coefficients for specific line number": "same",
     "primeFactors.test.js > primeFactors > should find prime factors": "same",
