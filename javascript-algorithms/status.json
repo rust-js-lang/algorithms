@@ -1,0 +1,14 @@
+{
+  "ports": 7,
+  "tests": 7,
+  "same": 7,
+  "status": {
+    "euclideanAlgorithm.test.js > euclideanAlgorithm > should calculate GCD recursively": "same",
+    "euclideanAlgorithmIterative.test.js > euclideanAlgorithmIterative > should calculate GCD iteratively": "same",
+    "factorial.test.js > factorial > should calculate factorial": "same",
+    "factorialRecursive.test.js > factorialRecursive > should calculate factorial": "same",
+    "fastPowering.test.js > fastPowering > should compute power in log(n) time": "same",
+    "isPowerOfTwo.test.js > isPowerOfTwo > should check if the number is made by multiplying twos": "same",
+    "isPowerOfTwoBitwise.test.js > isPowerOfTwoBitwise > should check if the number is made by multiplying twos": "same"
+  }
+}

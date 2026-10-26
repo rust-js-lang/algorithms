@@ -40,3 +40,17 @@ bun scripts/the-algorithms-rust.ts list                 # each algorithm's statu
 ```
 
 Both upstreams are MIT licensed; their licenses are kept beside their code.
+
+## javascript-algorithms
+
+Each JS module of `javascript-algorithms/src/` (upstream's, vendored) is a
+Rust module at the same path in `javascript-algorithms/rust/src/`, its
+directories and file in snake_case, built by `rust-js build`, which writes
+its JS beside it. The original's own tests then run twice under bun: on
+the original, and on a copy whose module at that path re-exports the
+compiled one. Each test's outcome is compared, in
+`javascript-algorithms/status.json`.
+
+```bash
+bun scripts/javascript-algorithms.ts
+```
