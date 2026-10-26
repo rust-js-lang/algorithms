@@ -42,7 +42,12 @@ function ports(): { original: string; compiled: string; rust: string }[] {
           if (!existsSync(path.replace(/\.rs$/, ".js"))) continue;
           file = rel.at(-1)!;
         }
-        const original = join("src", ...rel.map(kebab), `${camel(file)}.js`);
+        // As the original spells it, `ComplexNumber.js` of a class's
+        // module, whatever case the file system matches by.
+        const dir = join("src", ...rel.map(kebab));
+        const wanted = `${camel(file)}.js`.toLowerCase();
+        const entries = existsSync(join(port, dir)) ? readdirSync(join(port, dir)) : [];
+        const original = join(dir, entries.find((e) => e.toLowerCase() === wanted) ?? `${camel(file)}.js`);
         found.push({ original, compiled: path.replace(/\.rs$/, ".js"), rust: relative(port, path) });
       }
     }
@@ -101,8 +106,11 @@ if (import.meta.main) {
     const from = JSON.stringify(compiled);
     const hasDefault = /^export default /m.test(readFileSync(compiled, "utf8"));
     writeFileSync(join(ported, js), `export * from ${from};\n${hasDefault ? `export { default } from ${from};\n` : ""}`);
-    const test = join(dirname(js), "__test__", basename(js).replace(/\.js$/, ".test.js"));
-    if (existsSync(join(port, test))) tests.push(test);
+    // Its test, in the original's `__test__`, or `__tests__` of a few.
+    for (const dir of ["__test__", "__tests__"]) {
+      const test = join(dirname(js), dir, basename(js).replace(/\.js$/, ".test.js"));
+      if (existsSync(join(port, test))) tests.push(test);
+    }
   }
   const expected = run(original, tests);
   const actual = run(ported, tests);

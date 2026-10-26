@@ -9,6 +9,7 @@ pub mod integer_partition;
 pub mod is_power_of_two;
 pub mod least_common_multiple;
 pub mod liu_hui;
+pub mod matrix;
 pub mod pascal_triangle;
 pub mod primality_test;
 pub mod prime_factors;
