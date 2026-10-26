@@ -1,8 +1,10 @@
 {
-  "ports": 60,
-  "tests": 115,
-  "same": 115,
+  "ports": 61,
+  "tests": 117,
+  "same": 117,
   "status": {
+    "Comparator.test.js > Comparator > should compare with custom comparator function": "same",
+    "Comparator.test.js > Comparator > should compare with default comparator function": "same",
     "ComplexNumber.test.js > ComplexNumber > should add complex and natural numbers": "same",
     "ComplexNumber.test.js > ComplexNumber > should add complex numbers": "same",
     "ComplexNumber.test.js > ComplexNumber > should calculate i in power of two": "same",
