@@ -1089,8 +1089,8 @@
     "tests": 14
   },
   "math::matrix_ops": {
-    "status": "refused",
-    "detail": "error: rust-js does not support calling `std::convert::Into::into` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/math-matrix_ops/src/math/matrix_ops.rs:68:26\n   |\n\nerror: rust-js does not support calling `std::convert::Into::into` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/math-matrix_ops/src/math/matrix_ops.rs:79:34\n   |\n\nerror: rust-js does not support calling `std::convert::Into::into` yet\n   --> /Users/chauluu/Documents/Github/algorithms/build/one/math-matrix_ops/src/math/matrix_ops.rs:172:37\n    |"
+    "status": "same",
+    "tests": 18
   },
   "math::mersenne_primes": {
     "status": "same",
@@ -1477,8 +1477,8 @@
     "tests": 23
   },
   "string::autocomplete_using_trie": {
-    "status": "refused",
-    "detail": "error: rust-js does not support `collect` into a `()`, from its MIR yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/string-autocomplete_using_trie/src/string/autocomplete_using_trie.rs:60:22\n   |"
+    "status": "same",
+    "tests": 1
   },
   "string::boyer_moore_search": {
     "status": "same",

@@ -261,15 +261,24 @@ function jsResults(report: string): Results {
 // rust-js's toolchain, whose rustc builds the native side as rust-js's does.
 const toolchain = readFileSync(join(root, "..", "rust-js", "rust-toolchain.toml"), "utf8").match(/channel = "([^"]+)"/)![1];
 
-/** Each `#[should_panic]` test's function name of `text`. */
-const shouldPanic = (text: string) =>
-  new Set([...text.matchAll(/#\[should_panic[^\]]*\]\s*(?:#\[[^\]]*\]\s*)*fn\s+(\w+)/g)].map((m) => m[1]));
+/** Each test function of `text` that panics as it passes, which wasm32
+ * can't, as it aborts on a panic: a `#[should_panic]` one's name, and one
+ * that catches it, `catch_unwind`. */
+const panicking = (text: string) => {
+  const names = [...text.matchAll(/#\[should_panic[^\]]*\]\s*(?:#\[[^\]]*\]\s*)*fn\s+(\w+)/g)].map((m) => m[1]);
+  const fns = text.split(/(?=\bfn\s+\w+)/);
+  for (const f of fns) {
+    const name = f.match(/^fn\s+(\w+)/)?.[1];
+    if (name && /catch_unwind/.test(f)) names.push(name);
+  }
+  return new Set(names);
+};
 
 /** The prepared crate's tests natively, as rust-js's JS should run them:
  * built for wasm32-wasip1, whose `usize` is rust-js's 32 bits, overflow
  * unchecked as rust-js's is (ADR 0090), each run on its own under Bun's
- * WASI. A `#[should_panic]` one aborts there, so its outcome is the host's,
- * `host`. An error where it doesn't build for 32 bits. */
+ * WASI. One that panics as it passes aborts there, so its outcome is the
+ * host's, `host`. An error where it doesn't build for 32 bits. */
 async function nativeOf(dir: string, texts: string, host: Results): Promise<Results | string> {
   const wasm = join(dir, "tests.wasm");
   const built = spawnSync(
@@ -286,14 +295,14 @@ async function nativeOf(dir: string, texts: string, host: Results): Promise<Resu
     .stdout.split("\n")
     .filter((l) => l.endsWith(": test"))
     .map((l) => l.slice(0, -": test".length));
-  const panicking = shouldPanic(texts);
+  const panics = panicking(texts);
   const results: Results = {};
   let next = 0;
   await Promise.all(
     Array.from({ length: 8 }, async () => {
       while (next < names.length) {
         const name = names[next++];
-        if (panicking.has(name.split("::").at(-1)!) && host[name]) {
+        if (panics.has(name.split("::").at(-1)!) && host[name]) {
           results[name] = host[name];
           continue;
         }
