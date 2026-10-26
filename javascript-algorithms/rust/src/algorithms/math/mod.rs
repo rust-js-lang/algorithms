@@ -1,3 +1,4 @@
+pub mod binary_floating_point;
 pub mod bits;
 pub mod complex_number;
 pub mod euclidean_algorithm;
