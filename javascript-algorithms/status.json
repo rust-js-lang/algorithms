@@ -1,7 +1,7 @@
 {
-  "ports": 78,
-  "tests": 139,
-  "same": 139,
+  "ports": 81,
+  "tests": 142,
+  "same": 142,
   "status": {
     "Comparator.test.js > Comparator > should compare with custom comparator function": "same",
     "Comparator.test.js > Comparator > should compare with default comparator function": "same",
@@ -112,6 +112,8 @@
     "liuHui.test.js > liuHui > should calculate π based on 201326592-gon": "same",
     "liuHui.test.js > liuHui > should calculate π based on 24-gon": "same",
     "liuHui.test.js > liuHui > should calculate π based on 6144-gon": "same",
+    "longestCommonSubsequence.test.js > longestCommonSubsequence > should find longest common subsequence for two strings": "same",
+    "longestCommonSubsequenceRecursive.test.js > longestCommonSubsequenceRecursive > should find longest common substring between two strings": "same",
     "longestCommonSubstring.test.js > longestCommonSubstring > should find longest common substring between two strings": "same",
     "longestCommonSubstring.test.js > longestCommonSubstring > should handle unicode correctly": "same",
     "multiply.test.js > multiply > should multiply two numbers": "same",
@@ -134,6 +136,7 @@
     "railFenceCipher.test.js > railFenceCipher > encodes a string correctly for base=4": "same",
     "regularExpressionMatching.test.js > regularExpressionMatching > should match regular expressions in a string": "same",
     "setBit.test.js > setBit > should set bit at specific position": "same",
+    "shortestCommonSupersequence.test.js > shortestCommonSupersequence > should find shortest common supersequence of two sequences": "same",
     "sieveOfEratosthenes.test.js > sieveOfEratosthenes > should find all primes less than or equal to n": "same",
     "squareRoot.test.js > squareRoot > should correctly calculate square root for integers with custom tolerance": "same",
     "squareRoot.test.js > squareRoot > should correctly calculate square root with default tolerance": "same",
