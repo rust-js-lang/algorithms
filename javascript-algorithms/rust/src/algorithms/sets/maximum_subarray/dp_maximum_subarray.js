@@ -33,13 +33,13 @@ function dpMaximumSubarray(inputArray) {
     if (maxSum < currentSum) {
       maxSum = currentSum;
       maxStartIndex = currentStartIndex;
-      maxEndIndex = (currentIndex + 1) >>> 0;
+      maxEndIndex = currentIndex + 1;
     }
 
     // Reset currentSum and currentStartIndex if currentSum drops below 0.
     if (currentSum < 0) {
       currentSum = 0;
-      currentStartIndex = (currentIndex + 1) >>> 0;
+      currentStartIndex = currentIndex + 1;
     }
   }
 

@@ -20,16 +20,15 @@ function dpRainTerraces(terraces) {
   // Calculate the highest terrace level from the LEFT relative to the current terrace.
   leftMaxLevels[$at(leftMaxLevels, 0)] = first;
   for (let terraceIndex = 1; terraceIndex < terraces.length; terraceIndex++) {
-    const max = $f64Max(terraces[terraceIndex], $index(leftMaxLevels, terraceIndex - 1));
-    leftMaxLevels[$at(leftMaxLevels, terraceIndex)] = max;
+    leftMaxLevels[terraceIndex] = $f64Max(terraces[terraceIndex], leftMaxLevels[terraceIndex - 1]);
   }
 
   // Calculate the highest terrace level from the RIGHT relative to the current terrace.
   const index = (terraces.length - 1) >>> 0;
   rightMaxLevels[$at(rightMaxLevels, index)] = last;
   for (let terraceIndex = ((terraces.length - 1) >>> 0) - 1; terraceIndex >= 0; terraceIndex--) {
-    const value = $f64Max($index(terraces, terraceIndex), $index(rightMaxLevels, terraceIndex + 1));
-    rightMaxLevels[$at(rightMaxLevels, terraceIndex)] = value;
+    const max = $f64Max($index(terraces, terraceIndex), $index(rightMaxLevels, terraceIndex + 1));
+    rightMaxLevels[$at(rightMaxLevels, terraceIndex)] = max;
   }
 
   // Not let's go through all terraces one by one and calculate how much water
@@ -37,8 +36,8 @@ function dpRainTerraces(terraces) {
   for (const [terraceIndex, terrace] of terraces.entries()) {
     // Pick the lowest from the left/right highest terraces.
     const currentTerraceBoundary = $f64Min(
-      $index(leftMaxLevels, terraceIndex),
-      $index(rightMaxLevels, terraceIndex),
+      leftMaxLevels[terraceIndex],
+      rightMaxLevels[terraceIndex],
     );
 
     if (currentTerraceBoundary > terrace) {

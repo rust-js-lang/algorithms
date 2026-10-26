@@ -100,6 +100,7 @@ function knightTour(chessboardSize) {
 
   // Recursively try to do the next move.
   const solutionWasFound = knightTourRecursive(chessboard, moves);
+
   return solutionWasFound ? moves : [];
 }
 

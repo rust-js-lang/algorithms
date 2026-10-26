@@ -31,7 +31,7 @@ function buildZArray(zString) {
         zBoxRightIndex++;
       }
 
-      zArray[$at(zArray, charIndex)] = (zBoxRightIndex - zBoxLeftIndex) >>> 0;
+      zArray[charIndex] = (zBoxRightIndex - zBoxLeftIndex) >>> 0;
       zBoxRightIndex--;
     } else {
       // We're INSIDE of Z box: how far from its start this character is.
