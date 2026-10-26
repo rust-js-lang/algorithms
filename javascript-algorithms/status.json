@@ -1,7 +1,7 @@
 {
-  "ports": 49,
-  "tests": 87,
-  "same": 87,
+  "ports": 52,
+  "tests": 90,
+  "same": 90,
   "status": {
     "ComplexNumber.test.js > ComplexNumber > should add complex and natural numbers": "same",
     "ComplexNumber.test.js > ComplexNumber > should add complex numbers": "same",
@@ -68,7 +68,9 @@
     "isPowerOfTwo.test.js > isPowerOfTwo > should check if the number is made by multiplying twos": "same",
     "isPowerOfTwo.test.js > isPowerOfTwo > should detect if the number is power of two": "same",
     "isPowerOfTwoBitwise.test.js > isPowerOfTwoBitwise > should check if the number is made by multiplying twos": "same",
+    "knuthMorrisPratt.test.js > knuthMorrisPratt > should find word position in given text": "same",
     "leastCommonMultiple.test.js > leastCommonMultiple > should find least common multiple": "same",
+    "levenshteinDistance.test.js > levenshteinDistance > should calculate edit distance between two strings": "same",
     "liuHui.test.js > liuHui > should calculate π based on 12-gon": "same",
     "liuHui.test.js > liuHui > should calculate π based on 201326592-gon": "same",
     "liuHui.test.js > liuHui > should calculate π based on 24-gon": "same",
@@ -89,6 +91,7 @@
     "squareRoot.test.js > squareRoot > should throw for negative numbers": "same",
     "switchSign.test.js > switchSign > should switch the sign of the number using twos complement approach": "same",
     "trialDivision.test.js > trialDivision > should detect prime numbers": "same",
-    "updateBit.test.js > updateBit > should update bit at specific position": "same"
+    "updateBit.test.js > updateBit > should update bit at specific position": "same",
+    "zAlgorithm.test.js > zAlgorithm > should find word positions in given text": "same"
   }
 }
