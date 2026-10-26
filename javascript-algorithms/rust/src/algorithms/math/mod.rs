@@ -7,6 +7,7 @@ pub mod is_power_of_two;
 pub mod least_common_multiple;
 pub mod pascal_triangle;
 pub mod primality_test;
+pub mod prime_factors;
 pub mod radian;
 pub mod sieve_of_eratosthenes;
 pub mod square_root;

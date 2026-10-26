@@ -1,7 +1,7 @@
 {
-  "ports": 20,
-  "tests": 24,
-  "same": 24,
+  "ports": 21,
+  "tests": 27,
+  "same": 27,
   "status": {
     "classicPolynome.test.js > classicPolynome > should evaluate the polynomial for the specified value of x correctly": "same",
     "degreeToRadian.test.js > degreeToRadian > should convert degree to radian": "same",
@@ -21,6 +21,9 @@
     "leastCommonMultiple.test.js > leastCommonMultiple > should find least common multiple": "same",
     "pascalTriangle.test.js > pascalTriangle > should calculate Pascal Triangle coefficients for specific line number": "same",
     "pascalTriangleRecursive.test.js > pascalTriangleRecursive > should calculate Pascal Triangle coefficients for specific line number": "same",
+    "primeFactors.test.js > primeFactors > should find prime factors": "same",
+    "primeFactors.test.js > primeFactors > should give approximate prime factors count using Hardy-Ramanujan theorem": "same",
+    "primeFactors.test.js > primeFactors > should give correct deviation between exact and approx counts": "same",
     "radianToDegree.test.js > radianToDegree > should convert radian to degree": "same",
     "sieveOfEratosthenes.test.js > sieveOfEratosthenes > should find all primes less than or equal to n": "same",
     "squareRoot.test.js > squareRoot > should correctly calculate square root for integers with custom tolerance": "same",

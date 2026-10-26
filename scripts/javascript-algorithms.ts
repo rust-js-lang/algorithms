@@ -96,8 +96,11 @@ if (import.meta.main) {
       missing.push(js);
       continue;
     }
-    // The original's module, at its path, the port's export.
-    writeFileSync(join(ported, js), `export { default } from ${JSON.stringify(compiled)};\n`);
+    // The original's module, at its path, the port's exports: its named
+    // ones, and its default where it has one.
+    const from = JSON.stringify(compiled);
+    const hasDefault = /^export default /m.test(readFileSync(compiled, "utf8"));
+    writeFileSync(join(ported, js), `export * from ${from};\n${hasDefault ? `export { default } from ${from};\n` : ""}`);
     const test = join(dirname(js), "__test__", basename(js).replace(/\.js$/, ".test.js"));
     if (existsSync(join(port, test))) tests.push(test);
   }
