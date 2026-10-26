@@ -1,7 +1,7 @@
 {
-  "ports": 89,
-  "tests": 150,
-  "same": 150,
+  "ports": 90,
+  "tests": 152,
+  "same": 152,
   "status": {
     "Comparator.test.js > Comparator > should compare with custom comparator function": "same",
     "Comparator.test.js > Comparator > should compare with default comparator function": "same",
@@ -109,6 +109,8 @@
     "isPowerOfTwoBitwise.test.js > isPowerOfTwoBitwise > should check if the number is made by multiplying twos": "same",
     "jumpSearch.test.js > jumpSearch > should search for an element in sorted array": "same",
     "jumpSearch.test.js > jumpSearch > should search object in sorted array": "same",
+    "knightTour.test.js > knightTour > should find one solution to do knight tour on 5x5 board": "same",
+    "knightTour.test.js > knightTour > should not find solution on 3x3 board": "same",
     "knuthMorrisPratt.test.js > knuthMorrisPratt > should find word position in given text": "same",
     "leastCommonMultiple.test.js > leastCommonMultiple > should find least common multiple": "same",
     "levenshteinDistance.test.js > levenshteinDistance > should calculate edit distance between two strings": "same",
