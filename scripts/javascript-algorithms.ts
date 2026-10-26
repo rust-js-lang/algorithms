@@ -106,8 +106,8 @@ if (import.meta.main) {
     const from = JSON.stringify(compiled);
     const hasDefault = /^export default /m.test(readFileSync(compiled, "utf8"));
     writeFileSync(join(ported, js), `export * from ${from};\n${hasDefault ? `export { default } from ${from};\n` : ""}`);
-    // Its test, in the original's `__test__`, or `__tests__` of a few.
-    for (const dir of ["__test__", "__tests__"]) {
+    // Its test, in the original's `__test__`, or `__tests__` or `_test_` of a few.
+    for (const dir of ["__test__", "__tests__", "_test_"]) {
       const test = join(dirname(js), dir, basename(js).replace(/\.js$/, ".test.js"));
       if (existsSync(join(port, test))) tests.push(test);
     }

@@ -1,3 +1,5 @@
+pub mod simple_polynomial_hash;
+
 const DEFAULT_BASE: f64 = 37.0;
 const DEFAULT_MODULUS: f64 = 101.0;
 
