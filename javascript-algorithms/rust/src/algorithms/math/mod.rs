@@ -9,3 +9,4 @@ pub mod pascal_triangle;
 pub mod primality_test;
 pub mod radian;
 pub mod sieve_of_eratosthenes;
+pub mod square_root;
