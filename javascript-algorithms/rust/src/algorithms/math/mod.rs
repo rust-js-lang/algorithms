@@ -5,6 +5,7 @@ pub mod euclidean_distance;
 pub mod factorial;
 pub mod fast_powering;
 pub mod fibonacci;
+pub mod fourier_transform;
 pub mod horner_method;
 pub mod integer_partition;
 pub mod is_power_of_two;
