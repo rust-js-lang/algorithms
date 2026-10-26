@@ -24,7 +24,7 @@ function regularExpressionMatching(string, pattern) {
   const matchMatrix = Array.from({ length: n$1 }, () => value.slice());
 
   // Address empty pattern and empty string case.
-  matchMatrix[0][$at(matchMatrix[0], 0)] = true;
+  matchMatrix[0][0] = true;
 
   // Deal with first row of the matrix, which is all `false` but where a
   // `*` repeats what's before it none, `a*` of an empty string.
