@@ -1,6 +1,7 @@
 pub mod bits;
 pub mod complex_number;
 pub mod euclidean_algorithm;
+pub mod euclidean_distance;
 pub mod factorial;
 pub mod fast_powering;
 pub mod fibonacci;

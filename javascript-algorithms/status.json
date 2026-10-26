@@ -1,7 +1,7 @@
 {
-  "ports": 41,
-  "tests": 72,
-  "same": 72,
+  "ports": 42,
+  "tests": 74,
+  "same": 74,
   "status": {
     "ComplexNumber.test.js > ComplexNumber > should add complex and natural numbers": "same",
     "ComplexNumber.test.js > ComplexNumber > should add complex numbers": "same",
@@ -36,6 +36,8 @@
     "divideByTwo.test.js > divideByTwo > should divide numbers by two using bitwise operations": "same",
     "euclideanAlgorithm.test.js > euclideanAlgorithm > should calculate GCD recursively": "same",
     "euclideanAlgorithmIterative.test.js > euclideanAlgorithmIterative > should calculate GCD iteratively": "same",
+    "euclideanDistance.test.js > euclideanDistance > should calculate euclidean distance between vectors": "same",
+    "euclideanDistance.test.js > euclideanDistance > should throw an error in case if two matrices are of different shapes": "same",
     "factorial.test.js > factorial > should calculate factorial": "same",
     "factorialRecursive.test.js > factorialRecursive > should calculate factorial": "same",
     "fastPowering.test.js > fastPowering > should compute power in log(n) time": "same",
