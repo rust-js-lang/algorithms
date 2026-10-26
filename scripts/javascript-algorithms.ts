@@ -1,6 +1,7 @@
 // trekhleb/javascript-algorithms, written in Rust and compiled by rust-js:
 // each JS module of `src/` a Rust module at the same path in `rust/src/`,
-// its directories snake_case, its file's name too. The original's own tests
+// its directories snake_case, its file's name too, a directory's own,
+// `factorial/factorial.js`, its `mod.rs`. The original's own tests
 // run against the compiled JS, a module at the original's path re-exporting
 // it, and against the original, each test's outcome compared.
 //
@@ -23,17 +24,24 @@ const kebab = (name: string) => name.replaceAll("_", "-");
 /** `fast_powering` as the original names a file, `fastPowering`. */
 const camel = (name: string) => name.replace(/_([a-z0-9])/g, (_, c) => c.toUpperCase());
 
-/** Each Rust module of `rust/src`, a file but `mod.rs` and `lib.rs`: the
- * original's JS path it's the port of, and its compiled JS. */
+/** Each Rust module of `rust/src` but `lib.rs`: the original's JS path
+ * it's the port of, and its compiled JS. */
 function ports(): { original: string; compiled: string; rust: string }[] {
   const found: { original: string; compiled: string; rust: string }[] = [];
   (function walk(dir: string) {
     for (const entry of readdirSync(dir, { withFileTypes: true })) {
       const path = join(dir, entry.name);
       if (entry.isDirectory()) walk(path);
-      else if (entry.name.endsWith(".rs") && entry.name !== "mod.rs" && entry.name !== "lib.rs") {
+      else if (entry.name.endsWith(".rs") && entry.name !== "lib.rs") {
         const rel = relative(rustSrc, path).split("/");
-        const file = rel.pop()!.replace(/\.rs$/, "");
+        let file = rel.pop()!.replace(/\.rs$/, "");
+        // A directory's own, `factorial/factorial.js`, is its `mod.rs`, which
+        // clippy has rather than `factorial/factorial.rs`; one of `mod`s
+        // alone is no module of the original's, and has no JS.
+        if (file === "mod") {
+          if (!existsSync(path.replace(/\.rs$/, ".js"))) continue;
+          file = rel.at(-1)!;
+        }
         const original = join("src", ...rel.map(kebab), `${camel(file)}.js`);
         found.push({ original, compiled: path.replace(/\.rs$/, ".js"), rust: relative(port, path) });
       }

@@ -8,9 +8,7 @@ function euclideanAlgorithmIterative(a, b) {
   a = Math.abs(a);
   b = Math.abs(b);
   while (a !== 0 && b !== 0 && a !== b) {
-    const [_20, _21] = a > b ? [a - b, b] : [a, b - a];
-    a = _20;
-    b = _21;
+    [a, b] = a > b ? [a - b, b] : [a, b - a];
   }
   return a !== 0 ? a : b;
 }

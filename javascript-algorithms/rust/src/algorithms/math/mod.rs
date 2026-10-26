@@ -1,4 +1,9 @@
 pub mod euclidean_algorithm;
 pub mod factorial;
 pub mod fast_powering;
+pub mod fibonacci;
 pub mod is_power_of_two;
+pub mod least_common_multiple;
+pub mod primality_test;
+pub mod radian;
+pub mod sieve_of_eratosthenes;

@@ -1,14 +1,23 @@
 {
-  "ports": 7,
-  "tests": 7,
-  "same": 7,
+  "ports": 15,
+  "tests": 16,
+  "same": 16,
   "status": {
+    "degreeToRadian.test.js > degreeToRadian > should convert degree to radian": "same",
     "euclideanAlgorithm.test.js > euclideanAlgorithm > should calculate GCD recursively": "same",
     "euclideanAlgorithmIterative.test.js > euclideanAlgorithmIterative > should calculate GCD iteratively": "same",
     "factorial.test.js > factorial > should calculate factorial": "same",
     "factorialRecursive.test.js > factorialRecursive > should calculate factorial": "same",
     "fastPowering.test.js > fastPowering > should compute power in log(n) time": "same",
+    "fibonacci.test.js > fibonacci > should calculate fibonacci correctly": "same",
+    "fibonacciNth.test.js > fibonacciNth > should calculate fibonacci correctly": "same",
+    "fibonacciNthClosedForm.test.js > fibonacciClosedForm > should calculate fibonacci correctly": "same",
+    "fibonacciNthClosedForm.test.js > fibonacciClosedForm > should throw an error when trying to calculate fibonacci for not allowed positions": "same",
     "isPowerOfTwo.test.js > isPowerOfTwo > should check if the number is made by multiplying twos": "same",
-    "isPowerOfTwoBitwise.test.js > isPowerOfTwoBitwise > should check if the number is made by multiplying twos": "same"
+    "isPowerOfTwoBitwise.test.js > isPowerOfTwoBitwise > should check if the number is made by multiplying twos": "same",
+    "leastCommonMultiple.test.js > leastCommonMultiple > should find least common multiple": "same",
+    "radianToDegree.test.js > radianToDegree > should convert radian to degree": "same",
+    "sieveOfEratosthenes.test.js > sieveOfEratosthenes > should find all primes less than or equal to n": "same",
+    "trialDivision.test.js > trialDivision > should detect prime numbers": "same"
   }
 }

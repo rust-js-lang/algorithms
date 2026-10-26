@@ -1,0 +1,1 @@
+{"version":3,"file":"degree_to_radian.js","names":["degree_to_radian","degree: f64","180.0"],"sources":["degree_to_radian.rs"],"sourcesContent":["/// `degree` in radians.\npub fn degree_to_radian(degree: f64) -> f64 {\n    degree * (std::f64::consts::PI / 180.0)\n}\n\njs::export_default!(degree_to_radian);\n"],"mappings":";;;AACA,SAAOA,eAAiBC;EACpB,2BAAiCC"}
