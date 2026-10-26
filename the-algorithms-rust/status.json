@@ -454,7 +454,7 @@
   },
   "dynamic_programming::fibonacci": {
     "status": "refused",
-    "detail": "error: rust-js does not support calling `core::num::<impl u32>::bit_width` yet\n   --> /Users/chauluu/Documents/Github/algorithms/build/one/dynamic_programming-fibonacci/src/dynamic_programming/fibonacci.rs:196:20\n    |\n\nerror: rust-js does not support calling `std::borrow::ToOwned::to_owned` yet\n   --> /Users/chauluu/Documents/Github/algorithms/build/one/dynamic_programming-fibonacci/src/dynamic_programming/fibonacci.rs:216:41\n    |"
+    "detail": "error: rust-js does not support calling `core::num::<impl u32>::bit_width` yet\n   --> /Users/chauluu/Documents/Github/algorithms/build/one/dynamic_programming-fibonacci/src/dynamic_programming/fibonacci.rs:196:20\n    |"
   },
   "dynamic_programming::fractional_knapsack": {
     "status": "same",
@@ -669,8 +669,8 @@
     "detail": "num_traits"
   },
   "graph::bellman_ford": {
-    "status": "refused",
-    "detail": "error: rust-js does not support a map of `V` keys, whose class isn't given yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/graph-bellman_ford/src/graph/bellman_ford.rs:93:25\n   |"
+    "status": "same",
+    "tests": 6
   },
   "graph::bipartite_matching": {
     "status": "same",
@@ -701,8 +701,8 @@
     "tests": 15
   },
   "graph::dijkstra": {
-    "status": "refused",
-    "detail": "error: rust-js does not support a map of `V` keys, whose class isn't given yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/graph-dijkstra/src/graph/dijkstra.rs:60:25\n   |"
+    "status": "same",
+    "tests": 4
   },
   "graph::dinic_maxflow": {
     "status": "same",
@@ -753,8 +753,8 @@
     "tests": 18
   },
   "graph::prim": {
-    "status": "refused",
-    "detail": "error: rust-js does not support a map of `V` keys, whose class isn't given yet\n --> /Users/chauluu/Documents/Github/algorithms/build/one/graph-prim/src/graph/prim.rs:8:21\n  |"
+    "status": "same",
+    "tests": 9
   },
   "graph::prufer_code": {
     "status": "refused",
@@ -985,8 +985,8 @@
     "tests": 1
   },
   "math::exponential_linear_unit": {
-    "status": "refused",
-    "detail": "error: rust-js does not support calling `std::borrow::ToOwned::to_owned` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/math-exponential_linear_unit/src/math/exponential_linear_unit.rs:28:30\n   |"
+    "status": "same",
+    "tests": 1
   },
   "math::extended_euclidean_algorithm": {
     "status": "same",
@@ -1025,8 +1025,8 @@
     "tests": 1
   },
   "math::gaussian_error_linear_unit": {
-    "status": "refused",
-    "detail": "error: rust-js does not support calling `std::borrow::ToOwned::to_owned` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/math-gaussian_error_linear_unit/src/math/gaussian_error_linear_unit.rs:24:37\n   |\n\nerror: rust-js does not support calling `std::borrow::ToOwned::to_owned` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/math-gaussian_error_linear_unit/src/math/gaussian_error_linear_unit.rs:28:31\n   |"
+    "status": "same",
+    "tests": 1
   },
   "math::gcd_of_n_numbers": {
     "status": "same",
@@ -1069,8 +1069,8 @@
     "tests": 1
   },
   "math::leaky_relu": {
-    "status": "refused",
-    "detail": "error: rust-js does not support calling `std::borrow::ToOwned::to_owned` yet\n  --> /Users/chauluu/Documents/Github/algorithms/build/one/math-leaky_relu/src/math/leaky_relu.rs:23:30\n   |"
+    "status": "same",
+    "tests": 1
   },
   "math::least_square_approx": {
     "status": "needs-crate",
