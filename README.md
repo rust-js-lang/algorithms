@@ -19,10 +19,12 @@ whose `usize` is rust-js's 32 bits, with overflow unchecked as rust-js's is,
 and run under Bun's WASI (`scripts/wasi-run.ts`); a test that panics as it
 passes, `#[should_panic]` or by `catch_unwind`, aborts there, so it keeps
 the host's outcome. `64-bit` is one that doesn't build where `usize` is 32
-bits. Its status is in `the-algorithms-rust/status.json`: `same`, or what
-differs, a gap fixed in rust-js. `needs-crate` is one that uses an external
-crate (`rand`, `num-bigint`, `nalgebra`, `ndarray`, `quickcheck`), which
-rust-js's tests can't take yet.
+bits. One that uses an external crate (`num-bigint`, `nalgebra`, `ndarray`,
+`quickcheck`) is a Cargo crate of those alone, its tests run by `rust-js
+test` (rust-js's ADR 0916), and natively by `cargo test` for
+`wasm32-wasip1`. Its status is in `the-algorithms-rust/status.json`: `same`,
+or what differs, a gap fixed in rust-js. `needs-crate` is one that uses
+`rand`, whose `getrandom` has no backend for rust-js's target yet.
 
 ## Running
 

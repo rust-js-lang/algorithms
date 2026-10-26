@@ -40,16 +40,16 @@
     "tests": 2
   },
   "big_integer::fast_factorial": {
-    "status": "needs-crate",
-    "detail": "num_bigint, num_traits"
+    "status": "refused",
+    "detail": "error: rust-js does not support implementation evidence for `<num_bigint::BigUint as num_traits::One>` yet\n  --> src/big_integer/fast_factorial.rs:42:22\n   |\n\nerror: rust-js does not support implementation evidence for `<num_bigint::BigUint as num_traits::One>` yet\n  --> src/big_integer/fast_factorial.rs:69:39\n   |\n\nerror: rust-js does not support implementation evidence for `<num_bigint::BigUint as num_traits::One>` yet\n  --> src/math/factorial.rs:27:31\n   |"
   },
   "big_integer::multiply": {
     "status": "same",
     "tests": 12
   },
   "big_integer::poly1305": {
-    "status": "needs-crate",
-    "detail": "num_bigint, num_traits"
+    "status": "refused",
+    "detail": "error: rust-js does not support implementation evidence for `<num_bigint::BigUint as num_traits::Num>` yet\n  --> src/big_integer/poly1305.rs:7:9\n   |\n\nerror: rust-js does not support implementation evidence for `<num_bigint::BigUint as num_traits::Num>` yet\n  --> src/big_integer/poly1305.rs:7:9\n   |\n\nerror: rust-js does not support calling `num_bigint::BigUint::from_bytes_le` yet\n  --> src/big_integer/poly1305.rs:44:18\n   |"
   },
   "bit_manipulation::binary_coded_decimal": {
     "status": "same",
@@ -156,8 +156,8 @@
     "tests": 1
   },
   "ciphers::diffie_hellman": {
-    "status": "needs-crate",
-    "detail": "num_bigint, num_traits"
+    "status": "refused",
+    "detail": "error: rust-js does not support calling `std::convert::From::from` yet\n   --> src/ciphers/diffie_hellman.rs:238:36\n    |\n\nerror: rust-js does not support calling `num_bigint::BigUint::to_str_radix` yet\n   --> src/ciphers/diffie_hellman.rs:250:26\n    |\n\nerror: rust-js does not support calling `std::convert::From::from` yet\n   --> src/ciphers/diffie_hellman.rs:255:27\n    |"
   },
   "ciphers::gronsfeld": {
     "status": "same",
@@ -180,8 +180,7 @@
     "tests": 10
   },
   "ciphers::rail_fence": {
-    "status": "differs",
-    "detail": "ciphers::rail_fence::test::rails_basic: native pass, JS fail",
+    "status": "same",
     "tests": 1
   },
   "ciphers::rot13": {
@@ -249,8 +248,8 @@
     "tests": 2
   },
   "conversions::binary_to_decimal": {
-    "status": "needs-crate",
-    "detail": "num_traits"
+    "status": "same",
+    "tests": 3
   },
   "conversions::binary_to_hexadecimal": {
     "status": "same",
@@ -293,8 +292,8 @@
     "tests": 10
   },
   "conversions::length_conversion": {
-    "status": "needs-crate",
-    "detail": "num_traits"
+    "status": "same",
+    "tests": 2
   },
   "conversions::octal_to_binary": {
     "status": "same",
@@ -353,8 +352,8 @@
     "tests": 23
   },
   "data_structures::avl_tree": {
-    "status": "refused",
-    "detail": "error: rust-js does not support a `&mut std::boxed::Box<data_structures::avl_tree::AVLNode<T>>` from `std::option::Option::<T>::as_mut` used as a value, from its MIR yet\n   --> /Users/chauluu/Documents/Github/algorithms/build/one/data_structures-avl_tree/src/data_structures/avl_tree.rs:244:44\n    |"
+    "status": "same",
+    "tests": 6
   },
   "data_structures::b_tree": {
     "status": "same",
@@ -385,16 +384,16 @@
     "tests": 6
   },
   "data_structures::lazy_segment_tree": {
-    "status": "needs-crate",
-    "detail": "quickcheck, quickcheck_macros"
+    "status": "refused",
+    "detail": "error: The wasm32/64-unknown-unknown are not supported by default; you may need to enable the \"wasm_js\" crate feature. For more information see: https://docs.rs/getrandom/0.4.3/#webassembly-support\n   --> /Users/chauluu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/getrandom-0.4.3/src/backends.rs:176:17\n    |"
   },
   "data_structures::linked_list": {
     "status": "refused",
     "detail": "error: rust-js does not support `size_of` of a type parameter yet\n   --> /Users/chauluu/Documents/Github/algorithms/build/one/data_structures-linked_list/src/data_structures/linked_list.rs:102:21\n    |"
   },
   "data_structures::probabilistic::count_min_sketch": {
-    "status": "needs-crate",
-    "detail": "quickcheck, quickcheck_macros"
+    "status": "refused",
+    "detail": "error: The wasm32/64-unknown-unknown are not supported by default; you may need to enable the \"wasm_js\" crate feature. For more information see: https://docs.rs/getrandom/0.4.3/#webassembly-support\n   --> /Users/chauluu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/getrandom-0.4.3/src/backends.rs:176:17\n    |"
   },
   "data_structures::queue": {
     "status": "same",
@@ -613,20 +612,20 @@
     "tests": 2
   },
   "general::permutations": {
-    "status": "needs-crate",
-    "detail": "quickcheck"
+    "status": "refused",
+    "detail": "error: The wasm32/64-unknown-unknown are not supported by default; you may need to enable the \"wasm_js\" crate feature. For more information see: https://docs.rs/getrandom/0.4.3/#webassembly-support\n   --> /Users/chauluu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/getrandom-0.4.3/src/backends.rs:176:17\n    |"
   },
   "general::permutations::heap": {
-    "status": "needs-crate",
-    "detail": "quickcheck, quickcheck_macros"
+    "status": "refused",
+    "detail": "error: The wasm32/64-unknown-unknown are not supported by default; you may need to enable the \"wasm_js\" crate feature. For more information see: https://docs.rs/getrandom/0.4.3/#webassembly-support\n   --> /Users/chauluu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/getrandom-0.4.3/src/backends.rs:176:17\n    |"
   },
   "general::permutations::naive": {
-    "status": "needs-crate",
-    "detail": "quickcheck, quickcheck_macros"
+    "status": "refused",
+    "detail": "error: The wasm32/64-unknown-unknown are not supported by default; you may need to enable the \"wasm_js\" crate feature. For more information see: https://docs.rs/getrandom/0.4.3/#webassembly-support\n   --> /Users/chauluu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/getrandom-0.4.3/src/backends.rs:176:17\n    |"
   },
   "general::permutations::steinhaus_johnson_trotter": {
-    "status": "needs-crate",
-    "detail": "quickcheck, quickcheck_macros"
+    "status": "refused",
+    "detail": "error: The wasm32/64-unknown-unknown are not supported by default; you may need to enable the \"wasm_js\" crate feature. For more information see: https://docs.rs/getrandom/0.4.3/#webassembly-support\n   --> /Users/chauluu/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/getrandom-0.4.3/src/backends.rs:176:17\n    |"
   },
   "general::subarray_sum_equals_k": {
     "status": "same",
@@ -665,8 +664,8 @@
     "detail": "rand"
   },
   "graph::astar": {
-    "status": "needs-crate",
-    "detail": "num_traits"
+    "status": "refused",
+    "detail": "error: rust-js does not support Copy without representation evidence yet\n  --> src/graph/astar.rs:47:11\n   |"
   },
   "graph::bellman_ford": {
     "status": "same",
@@ -717,8 +716,8 @@
     "tests": 21
   },
   "graph::floyd_warshall": {
-    "status": "needs-crate",
-    "detail": "num_traits"
+    "status": "same",
+    "tests": 3
   },
   "graph::ford_fulkerson": {
     "status": "same",
@@ -897,12 +896,12 @@
     "detail": "rand"
   },
   "machine_learning::support_vector_classifier": {
-    "status": "needs-crate",
-    "detail": "ndarray"
+    "status": "refused",
+    "detail": "error: rust-js does not support a destructor of another crate's that its manifest doesn't export, `ndarray::OwnedRepr<f64>`, yet\n   --> src/machine_learning/support_vector_classifier.rs:341:5\n    |\n\nerror: rust-js does not support a destructor of another crate's that its manifest doesn't export, `ndarray::OwnedRepr<f64>`, yet\n   --> src/machine_learning/support_vector_classifier.rs:359:5\n    |\n\nerror: rust-js does not support a destructor of another crate's that its manifest doesn't export, `ndarray::OwnedRepr<f64>`, yet\n   --> src/machine_learning/support_vector_classifier.rs:378:22\n    |"
   },
   "math::abs": {
-    "status": "needs-crate",
-    "detail": "num_traits"
+    "status": "same",
+    "tests": 4
   },
   "math::aliquot_sum": {
     "status": "same",
@@ -925,24 +924,24 @@
     "tests": 5
   },
   "math::average": {
-    "status": "needs-crate",
-    "detail": "num_traits"
+    "status": "same",
+    "tests": 3
   },
   "math::baby_step_giant_step": {
     "status": "same",
     "tests": 4
   },
   "math::bell_numbers": {
-    "status": "needs-crate",
-    "detail": "num_bigint, num_traits"
+    "status": "refused",
+    "detail": "error: rust-js does not support statics of type `std::sync::RwLock<math::bell_numbers::MemTable>` yet\n  --> src/math/bell_numbers.rs:67:1\n   |\n\nerror: rust-js does not support implementation evidence for `<num_bigint::BigUint as num_traits::One>` yet\n  --> src/math/bell_numbers.rs:18:40\n   |\n\nerror: rust-js does not support calling `std::ops::Mul::mul` yet\n  --> src/math/bell_numbers.rs:91:51\n   |"
   },
   "math::binary_exponentiation": {
     "status": "same",
     "tests": 2
   },
   "math::binomial_coefficient": {
-    "status": "needs-crate",
-    "detail": "num_bigint, num_traits"
+    "status": "refused",
+    "detail": "error: rust-js does not support implementation evidence for `<math::binomial_coefficient::num_bigint::BigInt as math::binomial_coefficient::num_traits::FromPrimitive>` yet\n  --> src/math/binomial_coefficient.rs:27:19\n   |\n\nerror: rust-js does not support calling `std::convert::From::from` yet\n  --> src/math/binomial_coefficient.rs:40:33\n   |\n\nerror: rust-js does not support calling `std::convert::From::from` yet\n  --> src/math/binomial_coefficient.rs:45:34\n   |"
   },
   "math::catalan_numbers": {
     "status": "same",
@@ -993,8 +992,8 @@
     "tests": 1
   },
   "math::factorial": {
-    "status": "needs-crate",
-    "detail": "num_bigint, num_traits"
+    "status": "refused",
+    "detail": "error: rust-js does not support implementation evidence for `<num_bigint::BigUint as num_traits::One>` yet\n  --> src/math/factorial.rs:27:31\n   |\n\nerror: rust-js does not support implementation evidence for `<num_bigint::BigUint as std::str::FromStr>` yet\n  --> src/math/factorial.rs:61:43\n   |"
   },
   "math::factors": {
     "status": "same",
@@ -1073,8 +1072,8 @@
     "tests": 1
   },
   "math::least_square_approx": {
-    "status": "needs-crate",
-    "detail": "nalgebra"
+    "status": "refused",
+    "detail": "error: rust-js does not support calling `nalgebra::base::construction::<impl nalgebra::Matrix<T, nalgebra::Dyn, C, <nalgebra::DefaultAllocator as nalgebra::allocator::Allocator<nalgebra::Dyn, C>>::Buffer<T>>>::from_row_slice` yet\n  --> src/math/least_square_approx.rs:42:13\n   |"
   },
   "math::linear_sieve": {
     "status": "same",
@@ -1097,8 +1096,8 @@
     "tests": 1
   },
   "math::miller_rabin": {
-    "status": "needs-crate",
-    "detail": "num_bigint, num_traits"
+    "status": "refused",
+    "detail": "error: rust-js does not support calling `std::convert::From::from` yet\n  --> src/math/miller_rabin.rs:70:8\n   |\n\nerror: rust-js does not support calling `std::convert::From::from` yet\n   --> src/math/miller_rabin.rs:161:38\n    |\n\nerror: rust-js does not support calling `num_bigint::BigUint::parse_bytes` yet\n   --> src/math/miller_rabin.rs:215:13\n    |"
   },
   "math::modular_exponential": {
     "status": "same",
@@ -1129,8 +1128,8 @@
     "tests": 2
   },
   "math::pollard_rho": {
-    "status": "needs-crate",
-    "detail": "num_bigint, num_traits"
+    "status": "refused",
+    "detail": "error: rust-js does not support calling `std::convert::From::from` yet\n  --> src/math/miller_rabin.rs:70:8\n   |\n\nerror: rust-js does not support calling `std::convert::From::from` yet\n   --> src/math/miller_rabin.rs:161:38\n    |\n\nerror: rust-js does not support calling `num_bigint::BigUint::parse_bytes` yet\n   --> src/math/miller_rabin.rs:215:13\n    |"
   },
   "math::postfix_evaluation": {
     "status": "same",

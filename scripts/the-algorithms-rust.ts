@@ -22,6 +22,7 @@ const src = join(crate, "src");
 const statusFile = join(crate, "status.json");
 const nativeFile = join(root, "build", "native.json");
 const rustJs = process.env.RUST_JS ?? join(root, "..", "rust-js", "target", "debug", "rust-js");
+const rustJsCli = join(root, "..", "rust-js", "tooling", "cli.js");
 
 type Status = { status: "same" | "differs" | "refused" | "crashed" | "needs-crate" | "64-bit"; detail?: string; tests?: number };
 type Statuses = Record<string, Status>;
@@ -247,6 +248,47 @@ function prepare(dir: string, kept: Set<string>) {
   }
 }
 
+/** A Cargo.toml for the prepared copy at `dir` of only the external crates
+ * `crates` its modules use, as upstream's has each: the whole list would
+ * build `rand`'s `getrandom` for every one. `big-math`, upstream's default,
+ * where `num-bigint` or `num-traits` is one. */
+function writeManifest(dir: string, crates: string[]) {
+  const text = readFileSync(join(crate, "Cargo.toml"), "utf8");
+  const section = (name: string) => text.match(new RegExp(`\\[${name}\\]\\n([\\s\\S]*?)(?=\\n\\[|$)`))?.[1] ?? "";
+  const wanted = new Set(crates.map((c) => c.replaceAll("_", "-")));
+  const big = wanted.has("num-bigint") || wanted.has("num-traits");
+  if (big) wanted.add("num-bigint").add("num-traits");
+  const pick = (lines: string) =>
+    lines.split("\n").filter((line) => wanted.has(line.split("=")[0].trim().replaceAll("_", "-"))).join("\n");
+  const manifest = [
+    `[package]\nname = "the_algorithms_rust"\nversion = "0.1.0"\nedition = "2021"\n`,
+    `[dependencies]\n${pick(section("dependencies"))}\n`,
+    `[dev-dependencies]\n${pick(section("dev-dependencies"))}\n`,
+    big ? `[features]\ndefault = ["big-math"]\nbig-math = ["dep:num-bigint", "dep:num-traits"]\n` : "",
+  ].join("\n");
+  writeFileSync(join(dir, "Cargo.toml"), manifest);
+  cpSync(join(crate, "Cargo.lock"), join(dir, "Cargo.lock"));
+}
+
+/** The prepared Cargo crate's tests natively, as `nativeOf`'s are, built by
+ * Cargo for wasm32-wasip1. */
+async function cargoNativeOf(dir: string, texts: string, host: Results): Promise<Results | string> {
+  const built = spawnSync("cargo", [`+${toolchain}`, "test", "--no-run", "--lib", "--target", "wasm32-wasip1", "--message-format=json", "-q"], {
+    cwd: dir,
+    encoding: "utf8",
+    maxBuffer: 1 << 28,
+    timeout: 280_000,
+    env: { ...process.env, RUSTFLAGS: "-Coverflow-checks=off -Awarnings", CARGO_TARGET_DIR: join(root, "target", "wasm-native") },
+  });
+  const wasm = (built.stdout ?? "")
+    .split("\n")
+    .filter((l) => l.startsWith("{"))
+    .map((l) => JSON.parse(l))
+    .find((m) => m.reason === "compiler-artifact" && m.profile?.test && m.executable)?.executable;
+  if (!wasm) return (built.stderr ?? "").split("\n").filter((l) => l.startsWith("error")).slice(0, 4).join("\n") || "no test binary";
+  return runWasmTests(wasm, texts, host);
+}
+
 /** Each JS test's outcome, from bun's JUnit report. */
 function jsResults(report: string): Results {
   const results: Results = {};
@@ -290,6 +332,12 @@ async function nativeOf(dir: string, texts: string, host: Results): Promise<Resu
     const errors = (built.stderr ?? "").split(/\n(?=error)/).filter((b) => b.startsWith("error") && !/aborting due to/.test(b));
     return errors.slice(0, 2).map((b) => b.split("\n").slice(0, 6).join("\n")).join("\n\n");
   }
+  return runWasmTests(wasm, texts, host);
+}
+
+/** Each test of the wasm32-wasip1 test binary `wasm`, run on its own under
+ * Bun's WASI; one that panics as it passes, `texts` say, the host's. */
+async function runWasmTests(wasm: string, texts: string, host: Results): Promise<Results> {
   const runner = join(root, "scripts", "wasi-run.ts");
   const names = spawnSync("bun", [runner, wasm, "--list", "--format", "terse"], { encoding: "utf8" })
     .stdout.split("\n")
@@ -321,31 +369,42 @@ async function one(module: string, host: Results): Promise<Status> {
   const kept = needed(module);
   const texts = [...kept].map(readSource).join("\n");
   const crates = externalCrates.filter((c) => new RegExp(`\\b${c}::|use\\s+${c}\\b`).test(texts));
-  if (crates.length) return { status: "needs-crate", detail: crates.join(", ") };
   const dir = join(root, "build", "one", module.replaceAll("::", "-"));
   prepare(dir, kept);
-  const native = await nativeOf(dir, texts, host);
+  // `rand`'s `getrandom` has no backend for rust-js's target yet.
+  if (crates.includes("rand")) return { status: "needs-crate", detail: crates.join(", ") };
+  if (crates.length) writeManifest(dir, crates);
+  const native = crates.length ? await cargoNativeOf(dir, texts, host) : await nativeOf(dir, texts, host);
   if (typeof native === "string") return { status: "64-bit", detail: native };
-  const lib = join(dir, "js", "lib.js");
-  const compiled = spawnSync(rustJs, ["--test", join(dir, "src", "lib.rs"), "-o", lib, "--", "--edition=2021", "-Awarnings", "--cfg", 'feature="big-math"'], {
-    encoding: "utf8",
-    maxBuffer: 1 << 26,
-    timeout: 240_000,
-  });
-  if (compiled.status !== 0) {
-    const stderr = compiled.stderr ?? "";
-    if (/overflowed its stack|panicked at|SIGSEGV/.test(stderr) || compiled.signal) {
-      return { status: "crashed", detail: (compiled.signal ?? "") + stderr.split("\n").filter((l) => /overflowed|panicked|fatal/.test(l)).join("\n") };
-    }
-    const errors = stderr.split(/\n(?=error)/).filter((b) => b.startsWith("error") && !/aborting due to/.test(b));
-    return { status: "refused", detail: errors.slice(0, 3).map((b) => b.split("\n").slice(0, 3).join("\n")).join("\n\n") };
-  }
   const report = join(dir, "js", "report.xml");
-  spawnSync("bun", ["test", "--timeout=60000", "--reporter=junit", `--reporter-outfile=${report}`, join(dir, "js", "lib.test.js")], {
-    cwd: root,
-    encoding: "utf8",
-    timeout: 280_000,
-  });
+  mkdirSync(join(dir, "js"), { recursive: true });
+  const runner = ["--timeout=60000", "--reporter=junit", `--reporter-outfile=${report}`];
+  // Of external crates, Cargo's build, `rust-js test`'s (rust-js's ADR 0914);
+  // else the compiler alone, `rust-js --test`, and bun.
+  const compiled = crates.length
+    ? spawnSync("bun", [rustJsCli, "test", "--", ...runner], {
+        cwd: dir,
+        encoding: "utf8",
+        maxBuffer: 1 << 26,
+        timeout: 280_000,
+        env: { ...process.env, RUST_JS_COMPILER: rustJs, CARGO_TARGET_DIR: join(root, "target", "rust-js-test") },
+      })
+    : spawnSync(rustJs, ["--test", join(dir, "src", "lib.rs"), "-o", join(dir, "js", "lib.js"), "--", "--edition=2021", "-Awarnings", "--cfg", 'feature="big-math"'], {
+        encoding: "utf8",
+        maxBuffer: 1 << 26,
+        timeout: 240_000,
+      });
+  const stderr = compiled.stderr ?? "";
+  if (/overflowed its stack|panicked at|SIGSEGV/.test(stderr) || compiled.signal) {
+    return { status: "crashed", detail: (compiled.signal ?? "") + stderr.split("\n").filter((l) => /overflowed|panicked|fatal/.test(l)).join("\n") };
+  }
+  if (!crates.length && compiled.status !== 0 || crates.length && !existsSync(report)) {
+    const errors = stderr.split(/\n(?=error)/).filter((b) => b.startsWith("error") && !/aborting due to|could not compile/.test(b));
+    return { status: "refused", detail: errors.slice(0, 3).map((b) => b.split("\n").slice(0, 3).join("\n")).join("\n\n") || stderr.slice(0, 600) };
+  }
+  if (!crates.length) {
+    spawnSync("bun", ["test", ...runner, join(dir, "js", "lib.test.js")], { cwd: root, encoding: "utf8", timeout: 280_000 });
+  }
   const js = existsSync(report) ? jsResults(report) : {};
   const own = Object.entries(native).filter(([name]) => {
     // A test is the module's whose path, less its function and any `mod
