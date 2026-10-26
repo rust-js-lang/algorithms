@@ -1,7 +1,7 @@
 {
-  "ports": 99,
-  "tests": 162,
-  "same": 162,
+  "ports": 100,
+  "tests": 166,
+  "same": 166,
   "status": {
     "Comparator.test.js > Comparator > should compare with custom comparator function": "same",
     "Comparator.test.js > Comparator > should compare with default comparator function": "same",
@@ -158,6 +158,10 @@
     "setBit.test.js > setBit > should set bit at specific position": "same",
     "shortestCommonSupersequence.test.js > shortestCommonSupersequence > should find shortest common supersequence of two sequences": "same",
     "sieveOfEratosthenes.test.js > sieveOfEratosthenes > should find all primes less than or equal to n": "same",
+    "squareMatrixRotation.test.js > squareMatrixRotation > should rotate matrix #0 in-place": "same",
+    "squareMatrixRotation.test.js > squareMatrixRotation > should rotate matrix #1 in-place": "same",
+    "squareMatrixRotation.test.js > squareMatrixRotation > should rotate matrix #2 in-place": "same",
+    "squareMatrixRotation.test.js > squareMatrixRotation > should rotate matrix #3 in-place": "same",
     "squareRoot.test.js > squareRoot > should correctly calculate square root for integers with custom tolerance": "same",
     "squareRoot.test.js > squareRoot > should correctly calculate square root with default tolerance": "same",
     "squareRoot.test.js > squareRoot > should throw for negative numbers": "same",

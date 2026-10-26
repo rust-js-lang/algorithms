@@ -4,3 +4,4 @@ pub mod knight_tour;
 pub mod n_queens;
 pub mod rain_terraces;
 pub mod recursive_staircase;
+pub mod square_matrix_rotation;
